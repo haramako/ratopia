@@ -1,3 +1,5 @@
+require "google_drive"
+require './gs_reader'
 
 Material = Struct.new(:name, :category, :get_by, :price, :effect, :effect2, :target_class, :use_by)
 Building = Struct.new(:name, :category, :cost, :w, :h, :effect, :products)
@@ -12,7 +14,13 @@ class DatabaseLoader
   def initialize
   end
 
-  def load
+  def fetch
+    gs_reader = GsReader.new('service-account.json')
+    gs_reader.read_sheet("1p7zXmhLbTcbU-o6FdqpYa2GxUxSq8Jtlc6xZ7La6-XI", 'temp/ratopia')
+  end
+
+  def load(force)
+    fetch if force
     building_sheet = JSON.parse(IO.binread('temp/ratopia/施設.json'))
     material_sheet = JSON.parse(IO.binread('temp/ratopia/資源.json'))
     materials = parse_materials(material_sheet)
@@ -62,7 +70,7 @@ class DatabaseLoader
       mo = str.strip.match(/^(.*)x(\d+)$/)
       if mo
         material_and_number = str.strip.split(/x/)
-        [mo[1].strip, mo[1].strip.to_i]
+        [mo[1].strip, mo[2].strip.to_i]
       else
         [str,0]
       end

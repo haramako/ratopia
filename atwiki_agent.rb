@@ -54,9 +54,7 @@ class AtwikiAgent
       res = @m.get("#{@base_url}/?cmd=pedit&page=#{page.name}")
       form = res.form('edit_form')
       form['source'] = page.src
-      pp res
       res = form.submit
-      pp res
     end
   end
 

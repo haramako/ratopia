@@ -1,9 +1,7 @@
 require 'pp'
 require 'optparse'
-require 'time'
 require 'fileutils'
 require 'ruby-graphviz'
-require './gs_reader'
 require './database'
 
 # エントリーポイント
@@ -12,14 +10,7 @@ opt.on('--force') { @force = true }
 opt.on('--json') { @json = true }
 opt.parse!
 
-if @force || !File.exist?('temp')
-  require "google_drive"
-
-  gs_reader = GsReader.new('service-account.json')
-  gs_reader.read_sheet("1p7zXmhLbTcbU-o6FdqpYa2GxUxSq8Jtlc6xZ7La6-XI", 'temp/ratopia')
-end
-
-db = DatabaseLoader.new.load
+db = DatabaseLoader.new.load(@force)
 db.verify
 
 def make_to(db)
@@ -110,6 +101,16 @@ def graph_make_from(db, filename, target_class)
 
   db.buildings.each do |_,b|
     next unless ['生産','原材料'].include?(b.category)
+    
+    use = false
+    b.products.each do |p|
+      out = p.product[0]
+      if nodes[out]
+        use = true
+      end
+    end
+    next unless use
+    
     nodes[b.name] = g.add_nodes(b.name, label: b.name, shape: :house, style: :filled, fillcolor: '#aaaaff')
     b.products.each do |p|
       out = p.product[0]
@@ -119,7 +120,7 @@ def graph_make_from(db, filename, target_class)
     end
   end
 
-  g.output(png: filename)
+  g.output(jpg: filename)
 end
 
 def graph_make_from2(db, filename)
@@ -153,7 +154,8 @@ end
 
 # pp make_from(db)
 # pp make_to(db)
-graph_make_from(db, 'make_from0.png', 0)
-graph_make_from(db, 'make_from1.png', 1)
-graph_make_from(db, 'make_from2.png', 2)
+FileUtils.mkdir_p('output')
+graph_make_from(db, 'output/production_graph0.jpg', 0)
+graph_make_from(db, 'output/production_graph1.jpg', 1)
+graph_make_from(db, 'output/production_graph2.jpg', 2)
 #graph_make_from2(db, 'make_from2.png')
