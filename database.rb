@@ -1,8 +1,11 @@
 require "google_drive"
 require './gs_reader'
 
-Material = Struct.new(:name, :category, :get_by, :price, :effect, :effect2, :target_class, :use_by)
-Building = Struct.new(:name, :category, :cost, :w, :h, :effect, :products)
+Material = Struct.new(:name, :category, :get_by, :price, :effect, :effect2, :target_class,
+                      :use_by, :has_image, :desc)
+Building = Struct.new(:name, :category, :cost, :w, :h, :effect, :products,
+                      :has_image, :has_main_image,
+                      :desc, :research_cost, :research_prerequired, :inputs)
 Product = Struct.new(:product, :inputs, :cost)
 
 class DatabaseLoader
@@ -41,10 +44,17 @@ class DatabaseLoader
       end
       next if row['name'] == ''
       use_by = (row['use_by'] != '')
-      m = Material.new(row['name'], last_category, row['get_by'], row['price'],
-                       row['effect'], row['effect2'],
-                       parse_class(row['target_class']),
-                       use_by)
+      m = Material.new(
+        row['name'],
+        last_category,
+        row['get_by'],
+        row['price'],
+        row['effect'],
+        row['effect2'],
+        parse_class(row['target_class']),
+        use_by,
+        row['has_image'] != '',
+        row['desc'])
       list[m.name] = m
     end
     list
@@ -89,7 +99,29 @@ class DatabaseLoader
     rows.each do |row|
       last_category = row['category'] if row['category'] != ""
       next if row['name'] == ''
-      b = Building.new(row['name'], last_category, row['cost'], row['w'], row['h'], row['effect'])
+
+      # 素材のリストアップ
+      inputs = []
+      %w(土 木 葉 石 花びら 木材 木の棒 石材 ロープ 生地).each do |m|
+        inputs << [m, row[m].to_i] if row[m] != ''
+      end
+      inputs += parse_material_number_list(row['others'])
+
+      b = Building.new(
+        row['name'],
+        last_category,
+        row['cost'],
+        row['w'],
+        row['h'],
+        row['effect'],
+        nil,
+        row['has_image'] != '',
+        row['has_main_image'] != '',
+        row['desc'],
+        row['research_cost'],
+        row['research_prerequired'],
+        inputs,
+      )
       if b['category'] == '生産' || b['category'] == '原材料'
         b.products = parse_building_products(row)
       end
@@ -113,13 +145,20 @@ class Database
     end
   end
 
+  def verify_resource_number_list(list, msg)
+    list.each.with_index do |input, i|
+      verify_material_name(input[0], msg)
+    end
+  end
+
   def verify_buildings
     @buildings.each do |_,b|
-      next unless b.products
-      b.products.each do |row|
-        verify_material_name(row.product[0], "product of #{b.name}")
-        row.inputs.each.with_index do |input, i|
-          verify_material_name(input[0], "input of #{b.name} #{i}")
+      verify_resource_number_list(b.inputs, "inputs of #{b.name}")
+
+      if b.products
+        b.products.each.with_index do |row,i|
+          verify_material_name(row.product[0], "product of #{b.name}")
+          verify_resource_number_list(row.inputs, "product of #{b.name} #{i}")
         end
       end
     end

@@ -1,0 +1,15 @@
+** 施設一覧
+<%- categories.each do |category| -%>
+*** <%= category %>
+  <%- building_by_categories[category].each_slice(8) do |slice|
+     items = (slice+Array.new(8)).take(8).map do |b|
+       if b
+         "CENTER:#{h_icon(b,80,80,br:true)}"
+       else
+	 ''
+       end
+     end
+  -%>
+|<%= items.join('|') %>|
+  <%- end %>
+<%- end -%>

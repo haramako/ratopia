@@ -1,0 +1,16 @@
+** 基礎データ
+|RIGHT:名前|<%=r.name%>|RIGHT:カテゴリー|<%=r.category%>|CENTER:MIDDLE:<%=h_icon(r,160,160,name:false,link:false)%>|
+|RIGHT:価格|<%=r.price%>|RIGHT:需要層|<%=h_class r.target_class%>|~|
+|.||||~|
+|RIGHT:効果|>|>|<%=r.effect%> <%=r.effect2%>|~|
+|>|>|>|>|<%=r.desc%>|
+|<%=blank(100,1)%>|<%=blank(160,1)%>|<%=blank(100,1)%>|<%=blank(160,1)%>|<%=blank(200,1)%>|
+
+<%- if products && !products.empty? -%>
+** 生産物
+|番号|生産施設　　　　　　　　|材料　　　　　　　　　　　　　　　　　　　　　　　　　　|生産物　　　　　　|コスト　|
+<%- products.each.with_index do |pb,i| p,b = pb -%>
+|<%=i+1%>|<%=h_icon(b)%>|<%=h_item_list(p.inputs)%>|<%=h_item(p.product)%>|<%=p.cost%>|
+<%- end -%>
+<%- end -%>
+

@@ -1,9 +1,9 @@
 ** 基礎データ
-|RIGHT:名前|<%=b.name%>|RIGHT:カテゴリー|<%=b.category%>|TOP:<%=h_img(80,80)%>|<%=h_img(200,120)%>|
+|RIGHT:名前|<%=b.name%>|RIGHT:カテゴリー|<%=b.category%>|TOP:<%=h_icon(b,80,80,name:false,link:false)%>|&image(main_image.jpg,200,120)|
 |RIGHT:材料|[[木]]x1 [[草]]x1|RIGHT:コスト|<%=b.cost%>|~|~|
 |||RIGHT:サイズ|幅<%=b.w%>x高さ<%=b.h%>|~|~|
-|RIGHT:前提研究|[[製材所]]|RIGHT:研究コスト|3|~|~|
-|>|>|>|>|>|説明:<%=b.effect%>|
+|RIGHT:前提研究|<%=h_icon(b)%>|RIGHT:研究コスト|<%=b.research_prerequired%>|~|~|
+|>|>|>|>|>|<%=h_txt b.desc %>|
 |<%=blank(100,1)%>|<%=blank(160,1)%>|<%=blank(100,1)%>|<%=blank(160,1)%>|<%=blank(80,1)%>|<%=blank(200,1)%>|
 
 <%- if b.products -%>

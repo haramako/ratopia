@@ -1,0 +1,6 @@
+** <%=title%>
+
+|名前　　　　　　|説明　　　　　　　　　　　　　|材料　　　　　　　　　　|研究コスト|
+<%- buildings.each do |b| -%>
+|<%=h_icon(b,80,80,br:true)%>|<%=h_txt(b.desc)%>|<%=h_item_list(b.inputs)%>|<%=b.research_cost%>|
+<%- end -%>
