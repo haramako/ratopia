@@ -10,112 +10,85 @@ opt.on('--force') { @force = true }
 opt.on('--json') { @json = true }
 opt.parse!
 
-db = DatabaseLoader.new.load(@force)
-db.verify
+db = DatabaseLoader.load(@force)
 
-def make_to(db)
-  r = Hash.new{|h,k| h[k] = Set.new}
-  db.flatten_products.each do |product, building|
-    product.inputs.each do |input|
-      r[input[0]] << product.product[0]
-    end
+def make_resource_node(g,r)
+  color = :black
+  penwidth = 1
+  fillcolor = 'none'
+  label = r.name
+  case r.get_by
+  when ''
+    shape = :box
+  when '採掘'
+    shape = :hexagon
+    fillcolor = '#bbbbbb'
+  else
+    shape = :ellipse
+    fillcolor = '#bbbbbb'
   end
-  r
+
+  class_mark = ['','●','★']
+  case r.category
+  when '食べ物'
+    fillcolor = '#ff8888'
+    label = "#{class_mark[r.target_class]}#{r.name}"
+  when '生活用品'
+    fillcolor = '#88ff88'
+    label = "#{class_mark[r.target_class]}#{r.name}"
+  else
+    # DO NOTHING
+  end
+
+  if r.use_by
+    # label = '▼' + label
+  end
+
+  g.add_nodes(
+    r.name,
+    shape: shape,
+    style: :filled,
+    fillcolor: fillcolor, 
+    color: color,
+    penwidth: penwidth,
+    label: label,
+  )
 end
 
-def make_from(db)
-  r = Hash.new{|h,k| h[k] = Set.new}
-  db.flatten_products.each do |product, building|
-    product.inputs.each do |input|
-      r[product.product[0]] << input[0]
-    end
-  end
-  r
+def make_building_node(g,b)
+  g.add_nodes(b.name, label: b.name, shape: :house, style: :filled, fillcolor: '#aaaaff')
 end
 
 def graph_make_from(db, filename, target_class)
-  data = make_from(db)
-  data2 = make_to(db)
   g = GraphViz.new( :G, type: :digraph, layout: :dot)
-  
+
   nodes = {}
-  (data.keys + data2.keys).uniq.each do |k|
-    mat = db.materials[k]
-
-    next if mat.target_class > target_class
-    next if mat.category == '交易品'
+  db.materials.values.each do |r|
+    next if r.resources_produce_from.empty? && r.resources_produce_to.empty?
+    next if r.level > target_class
     
-    color = :black
-    penwidth = 1
-    fillcolor = 'none'
-    label = mat.name
-    case mat.get_by
-    when ''
-      shape = :box
-    when '採掘'
-      shape = :hexagon
-      fillcolor = '#bbbbbb'
-    else
-      shape = :ellipse
-      fillcolor = '#bbbbbb'
-    end
-
-    class_mark = ['','●','★']
-    case mat.category
-    when '食べ物'
-      fillcolor = '#ff8888'
-      label = "#{class_mark[mat.target_class]}#{mat.name}"
-    when '生活用品'
-      fillcolor = '#88ff88'
-      label = "#{class_mark[mat.target_class]}#{mat.name}"
-    when '交易品'
-      fillcolor = '#8888ff'
-    else
-      # DO NOTHING
-    end
-
-    if mat.use_by
-      label = '▼' + label
-    end
-
-    nodes[k] = g.add_nodes(
-      k,
-      shape: shape,
-      style: :filled,
-      fillcolor: fillcolor, 
-      color: color,
-      penwidth: penwidth,
-      label: label,
-    )
-  end
-  
-  data.each do |k,set|
-    set.each do |out|
-      if nodes[k] && nodes[out]
-        if nodes[out] && nodes[k]
-          g.add_edge(nodes[out], nodes[k])
-        end
-      end
-    end
+    nodes[r.name] = make_resource_node(g,r)
   end
 
-  db.buildings.each do |_,b|
-    next unless ['生産','原材料'].include?(b.category)
-    
-    use = false
-    b.products.each do |p|
-      out = p.product[0]
-      if nodes[out]
-        use = true
+  db.materials.each_value do |r|
+    r.resources_produce_to.each do |to|
+      if nodes[r.name] && nodes[to]
+        g.add_edge(nodes[r.name], nodes[to])
       end
     end
-    next unless use
-    
-    nodes[b.name] = g.add_nodes(b.name, label: b.name, shape: :house, style: :filled, fillcolor: '#aaaaff')
-    b.products.each do |p|
-      out = p.product[0]
-      if nodes[out]
-        g.add_edge(nodes[b.name], nodes[out])
+
+    # 建物へのノードを追加
+    if nodes[r.name]
+      r.buildings_by_input.each do |_b|
+        b = db.buildings[_b]
+        nodes[b.name] = make_building_node(g,b) unless nodes[b.name]
+        g.add_edge(nodes[b.name], nodes[r.name])
+      end
+
+      if r.building_used_by
+        b = db.find(r.building_used_by)
+        nodes[b.name] = make_building_node(g,b) unless nodes[b.name]
+        g.add_edge(nodes[r.name], nodes[b.name])
       end
     end
   end
@@ -123,39 +96,7 @@ def graph_make_from(db, filename, target_class)
   g.output(jpg: filename)
 end
 
-def graph_make_from2(db, filename)
-  data = make_from(db)
-  data2 = make_to(db)
-  g = GraphViz.new( :G, type: :digraph, layout: :dot)
-  
-  data = make_from(db)
-  data2 = make_to(db)
-  nodes = {}
-  (data.keys + data2.keys).uniq.each do |k|
-    nodes[k] = g.add_nodes(k, shape: :box)
-  end
-
-  i = 0
-  db.flatten_products.each do |product, building|
-    i += 1
-    if product.inputs.size <= 1
-      g.add_edge(nodes[product.inputs[0][0]], nodes[product.product[0]])
-    else
-      prod_node = g.add_nodes("#{building}#{i}", label: '', shape: :circle, width: 0.2, height: 0.2)
-    product.inputs.each do |input|
-      g.add_edge(nodes[input[0]], prod_node)
-    end
-    g.add_edge(prod_node, nodes[product.product[0]])
-    end
-  end
-  
-  g.output(png: filename)
-end
-
-# pp make_from(db)
-# pp make_to(db)
 FileUtils.mkdir_p('output')
 graph_make_from(db, 'output/production_graph0.jpg', 0)
 graph_make_from(db, 'output/production_graph1.jpg', 1)
 graph_make_from(db, 'output/production_graph2.jpg', 2)
-#graph_make_from2(db, 'make_from2.png')

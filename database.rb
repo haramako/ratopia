@@ -1,142 +1,32 @@
-require "google_drive"
-require './gs_reader'
+require './database_loader'
 
-Material = Struct.new(:name, :category, :get_by, :price, :effect, :effect2, :target_class,
-                      :use_by, :has_image, :desc)
-Building = Struct.new(:name, :category, :cost, :w, :h, :effect, :products,
-                      :has_image, :has_main_image,
-                      :desc, :research_cost, :research_prerequired, :inputs)
-Product = Struct.new(:product, :inputs, :cost)
-
-class DatabaseLoader
-  CLASS_NAME_MAP = {
-    '中流' => 1,
-    '上流' => 2
-  }
-
-  def initialize
-  end
-
-  def fetch
-    gs_reader = GsReader.new('service-account.json')
-    gs_reader.read_sheet("1p7zXmhLbTcbU-o6FdqpYa2GxUxSq8Jtlc6xZ7La6-XI", 'temp/ratopia')
-  end
-
-  def load(force)
-    fetch if force
-    building_sheet = JSON.parse(IO.binread('temp/ratopia/施設.json'))
-    material_sheet = JSON.parse(IO.binread('temp/ratopia/資源.json'))
-    materials = parse_materials(material_sheet)
-    buildings = parse_buildings(building_sheet)
-    Database.new(materials, buildings)
-  end
-
-  def parse_class(str)
-    CLASS_NAME_MAP[str] || 0
-  end
-
-  def parse_materials(rows)
-    list = {}
-    last_category = ''
-    rows.each do |row|
-      if row['category'] != ""
-        last_category = row['category']
-      end
-      next if row['name'] == ''
-      use_by = (row['use_by'] != '')
-      m = Material.new(
-        row['name'],
-        last_category,
-        row['get_by'],
-        row['price'],
-        row['effect'],
-        row['effect2'],
-        parse_class(row['target_class']),
-        use_by,
-        row['has_image'] != '',
-        row['desc'])
-      list[m.name] = m
-    end
-    list
-  end
-
-  def parse_building_products(row)
-    result = []
-    9.times do |i|
-      product = row["product#{i}"]
-      input = row["material#{i}"]
-      next if product == "" && input == ""
-      cost = row["cost#{i}"].to_i
-      # pp input, parse_material_number_list(input)
-      result << Product.new(parse_material_number(product), parse_material_number_list(input), cost)
-    end
-    result
-  end
-
-  def parse_material_number(str)
-    if str == ""
-      []
-    else
-      mo = str.strip.match(/^(.*)x(\d+)$/)
-      if mo
-        material_and_number = str.strip.split(/x/)
-        [mo[1].strip, mo[2].strip.to_i]
-      else
-        [str,0]
-      end
-    end
-  end
-
-  def parse_material_number_list(str)
-    str.split(/,/).map do |item|
-      parse_material_number(item)
-    end
-  end
-
-  def parse_buildings(rows)
-    list = {}
-    last_category = nil
-    rows.each do |row|
-      last_category = row['category'] if row['category'] != ""
-      next if row['name'] == ''
-
-      # 素材のリストアップ
-      inputs = []
-      %w(土 木 葉 石 花びら 木材 木の棒 石材 ロープ 生地).each do |m|
-        inputs << [m, row[m].to_i] if row[m] != ''
-      end
-      inputs += parse_material_number_list(row['others'])
-
-      b = Building.new(
-        row['name'],
-        last_category,
-        row['cost'],
-        row['w'],
-        row['h'],
-        row['effect'],
-        nil,
-        row['has_image'] != '',
-        row['has_main_image'] != '',
-        row['desc'],
-        row['research_cost'],
-        row['research_prerequired'],
-        inputs,
-      )
-      if b['category'] == '生産' || b['category'] == '原材料'
-        b.products = parse_building_products(row)
-      end
-      list[b.name] = b
-    end
-    list
-  end
-
+class Material < Struct.new(:name, :category, :get_by, :price, :effect, :effect2, :target_class,
+                            :use_by, :has_image, :desc, :level)
+  attr_accessor :resources_produce_from
+  attr_accessor :resources_produce_to
+  attr_accessor :buildings_by_output
+  attr_accessor :buildings_by_input
+  attr_accessor :building_used_by
 end
 
+class Building < Struct.new(:name, :category, :cost, :w, :h, :effect, :products,
+                      :has_image, :has_main_image,
+                      :desc, :research_cost, :research_prerequired, :inputs,
+                      :on_ground, :has_worker, :hp,
+                      :service_effect, :service_target_class, :service_price, :service_cost, :service_cost_amount)
+end
+
+class Product < Struct.new(:product, :inputs, :cost)
+  attr_accessor :building
+end
+
+# Ratopiaデータベース
 class Database
   attr_reader :materials, :buildings
   def initialize(_materials, _buildings)
     @materials = _materials
     @buildings = _buildings
+    verify
   end
 
   def verify_material_name(mat, msg)
@@ -166,6 +56,25 @@ class Database
   
   def verify
     verify_buildings
+    provide_resources
+  end
+
+  def provide_resources
+    @materials.each_value do |r|
+      r.resources_produce_to = products_by_output(r).map{|p| p.product[0]}.uniq
+      r.resources_produce_from = products_by_input(r).map{|p| p.inputs.map{|i|i[0]}}.flatten.uniq
+      r.buildings_by_input = products_by_input(r).map{|p| p.building}.uniq
+      r.buildings_by_output = products_by_output(r).map{|p| p.building}.uniq
+    end
+
+    # 資源を使用する施設を検索
+    @buildings.each_value do |b|
+      if b.service_cost
+        b.service_cost.each do |r,_|
+          find(r).building_used_by = b.name
+        end
+      end
+    end
   end
 
   def flatten_products
@@ -174,6 +83,51 @@ class Database
         [p, b.name]
       end
     end.flatten(1)
+  end
+
+  # 名前から資源か施設を取得する
+  def find(name_or_obj)
+    if name_or_obj.nil?
+      nil
+    elsif name_or_obj.is_a?(String)
+      @materials[name_or_obj] || @buildings[name_or_obj]
+    else
+      name_or_obj
+    end
+  end
+
+  def make_all_products_by_input
+    list = Hash.new{|h,k| h[k] = Set.new}
+    flatten_products.each do |product, building|
+      product.inputs.each do |input|
+        list[product.product[0]] << product
+      end
+    end
+    list
+  end
+
+  # resource からをそれを入力とする生産を取得する
+  def products_by_input(r)
+    @production_by_input_cache ||= make_all_products_by_input
+    r = find(r)
+    r && @production_by_input_cache[r.name]
+  end
+  
+  def make_all_products_by_output
+    list = Hash.new{|h,k| h[k] = Set.new}
+    flatten_products.each do |product, building|
+      product.inputs.each do |input|
+        list[input[0]] << product
+      end
+    end
+    list
+  end
+  
+  # resource からをそれを出力とする生産を取得する
+  def products_by_output(r)
+    @production_by_output_cache ||= make_all_products_by_output
+    r = find(r)
+    r && @production_by_output_cache[r.name]
   end
 
 end

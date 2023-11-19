@@ -82,11 +82,11 @@ end
 def h_class(n)
   case n
   when 1
-    '中流階層以上'
+    '中産階級以上'
   when 1
-    '上流階層以上'
+    '上流階級以上'
   else
-    '全階層'
+    '全階級'
   end
 end
 
@@ -202,7 +202,7 @@ end
 #====================================================
 
 BEGIN_MARK = "//@@自動生成開始@@\n//この部分はプログラムで自動生成された部分です。「自動生成終了」の場所までは編集しないでください。編集しても上書きされます！\n"
-END_MARK = "\n//この次の行までが、自動生成の部分です。\n//@@自動生成終了@@\n"
+END_MARK = "\n//この次の行までが、自動生成の部分です。\n//@@自動生成終了@@"
 
 def replace(src, out, base)
   page_src = src.gsub(/\r/,'')
@@ -210,13 +210,13 @@ def replace(src, out, base)
     # 新規ページの場合
     out_src = BEGIN_MARK + out + END_MARK + (base ? template(base).result : '')
   else
-    mo = page_src.match(%r{//@@自動生成開始@@(.+)@@自動生成終了@@\n}m)
+    mo = page_src.match(%r{//@@自動生成開始@@(.+)@@自動生成終了@@}m)
     if mo
       # 置き換え
       out_src = mo.pre_match + BEGIN_MARK + out + END_MARK + mo.post_match
     else
       # $$自動生成開始$$がない場合は、頭に足す
-      out_src = BEGIN_MARK + out + END_MARK + page_src
+      out_src = BEGIN_MARK + out + END_MARK + "\n" + page_src
     end
   end
   [page_src != out_src, page_src, out_src]

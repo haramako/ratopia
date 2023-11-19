@@ -1,8 +1,8 @@
 ** 施設一覧
 <%- categories.each do |category| -%>
 |>|>|>|>|>|>|>|>|CENTER:BGCOLOR(#864300):<%= category %>|
-  <%- resource_by_categories[category].each_slice(12) do |slice|
-     items = (slice+Array.new(12)).take(9).map do |r|
+  <%- resource_by_categories[category].each_slice(9) do |slice|
+     items = (slice+Array.new(9)).take(9).map do |r|
        if r
          "CENTER:#{h_icon(r,80,80,br:true)}"
        else
