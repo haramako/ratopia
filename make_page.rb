@@ -7,6 +7,8 @@ require 'erb'
 require './database'
 require './atwiki_agent'
 
+$write_count = 0
+
 #====================================================
 
 def base_url
@@ -25,7 +27,7 @@ def blank(w,h)
   "&image(https://img.atwiki.jp/ratopia/pub/x.png,width=#{w},height=#{h})"
 end
 
-def h_icon(x,w=40,h=40,alt:nil, name:true, br:false, link:true)
+def h_icon(x,w=40,h=40,alt:nil, name:true, br:false, link:true,large:false)
   if x.is_a?(String)
     x = $db.buildings[x] || $db.materials[x]
   end
@@ -43,7 +45,11 @@ def h_icon(x,w=40,h=40,alt:nil, name:true, br:false, link:true)
     end
   elsif x.is_a?(Building)
     if x.has_image
-      img = "b/#{x.name}.jpg"
+      if large
+        img = "bl/#{x.name}.jpg"
+      else
+        img = "b/#{x.name}.jpg"
+      end
     else
       img = "noimage.jpg"
     end
@@ -61,8 +67,8 @@ def h_icon(x,w=40,h=40,alt:nil, name:true, br:false, link:true)
   end
 end
 
-def h_img(w,h)
-  "&image(https://img.atwiki.jp/ratopia/pub/x.png,width=#{w},height=#{h})"
+def h_img(filename,w,h)
+  "&image(https://img.atwiki.jp/ratopia/pub/#{filename},width=#{w},height=#{h})"
 end
 
 def h_item(name_num)
@@ -98,6 +104,15 @@ def h_txt(txt)
   (txt||'').gsub(/\n/,'&br()')
 end
 
+def get_from(r)
+  r = $db.materials(r) if r.is_a?(String)
+  $db.flatten_products
+    .select { |p| p[0].product[0] == r.name }
+    .flat_map{|p| [*p[0].inputs.map{|n|n[0]}, p[1]] }
+    .uniq
+    .sort_by{|x| $db.buildings[x] ? 0 : 1 }
+end
+
 #====================================================
 def make_building_page(b)
   out = template('building').result_with_hash({b:,})
@@ -112,14 +127,16 @@ def output_page(page_name, out, base = nil)
 end
 
 def make_building_list_page
-  categories = ['基盤', '原材料', '生産']
+  categories = ['基盤', '原材料', '生産', 'サービス', '軍事', '飾り', '王室']
   building_by_categories = $db.buildings.values.group_by{|b| b.category}
 
+  # アテゴリごと
   categories.each do |category|
     out = template('building_list').result_with_hash({title: "#{category}施設リスト", buildings: building_by_categories[category]})
     output_page(category, out)
   end
-  
+
+  # 全リスト
   out = template('building_list_all').result_with_hash({categories:, building_by_categories:})
   output_page('施設一覧', out)
 end
@@ -127,6 +144,14 @@ end
 def make_resource_list_page
   categories = ['食べ物', '生活用品', '材料']
   resource_by_categories = $db.materials.values.group_by{|b| b.category}
+
+  # アテゴリごと
+  categories.each do |category|
+    out = template('resource_list').result_with_hash({category:, resources: resource_by_categories[category]})
+    output_page(category, out)
+  end
+
+  # 全リスト
   out = template('resource_list_all').result_with_hash({categories:, resource_by_categories:})
   output_page('資源一覧', out)
 end
@@ -137,38 +162,61 @@ def make_resource_page(r)
   output_page(r.name, out, 'resource_base')
 end
 
-def make_page(name)
-  b = $db.buildings[name]
-  make_building_page(b) if b
 
-  r = $db.materials[name]
-  make_resource_page(r) if r
-
-  make_building_list_page if name == 'list' || name == 'building_list'
-  make_resource_list_page if name == 'list' || name == 'resource_list'
-end
-
-def make_page_all
+def make_building_pages
   $db.buildings.each_value do |b|
     make_building_page(b)
   end
 end
 
+def make_resource_pages
+  $db.materials.each_value do |r|
+    make_resource_page(r)
+  end
+end
+
+def make_page(name)
+  case
+  when b = $db.buildings[name]
+    make_building_page(b)
+  when r = $db.materials[name]
+    make_resource_page(r)
+  else
+    case name
+    when 'building'
+      make_building_pages
+    when 'resource'
+      make_resource_pages
+    when 'building_list'
+      make_building_list_page
+    when 'resource_list'
+      make_resource_list_page
+    when 'all'
+      ['building_list','resource_list','building','resource'].each do |name|
+        make_page(name)
+      end
+    end
+  end
+end
+
 #====================================================
+
+BEGIN_MARK = "//@@自動生成開始@@\n//この部分はプログラムで自動生成された部分です。「自動生成終了」の場所までは編集しないでください。編集しても上書きされます！\n"
+END_MARK = "\n//この次の行までが、自動生成の部分です。\n//@@自動生成終了@@\n"
 
 def replace(src, out, base)
   page_src = src.gsub(/\r/,'')
   if page_src == ''
     # 新規ページの場合
-    out_src = "//@@自動生成開始@@\n" + out + "\n//@@自動生成終了@@\n" + (base ? template(base).result : '')
+    out_src = BEGIN_MARK + out + END_MARK + (base ? template(base).result : '')
   else
-    mo = page_src.match(%r{//@@自動生成開始@@(.+)@@自動生成終了@@}m)
+    mo = page_src.match(%r{//@@自動生成開始@@(.+)@@自動生成終了@@\n}m)
     if mo
       # 置き換え
-      out_src = mo.pre_match + "//@@自動生成開始@@\n" + out + "\n//@@自動生成終了@@" + mo.post_match
+      out_src = mo.pre_match + BEGIN_MARK + out + END_MARK + mo.post_match
     else
       # $$自動生成開始$$がない場合は、頭に足す
-      out_src = "//@@自動生成開始@@\n" + out + "\n//@@自動生成終了@@\n" + page_src
+      out_src = BEGIN_MARK + out + END_MARK + page_src
     end
   end
   [page_src != out_src, page_src, out_src]
@@ -183,6 +231,12 @@ def download_page(page_name, out, base = nil)
 end
 
 def upload_page(page_name, out, base = nil)
+  $write_count += 1
+  if $write_count >= 50
+    puts "Write limit! waite for 10 minites"
+    sleep 60*10
+    $write_count = 0
+  end
   page = $wiki.get_page_by_name(page_name)
   changed, page_src, out_src = replace(page.src, out, base)
   if changed
@@ -215,10 +269,4 @@ FileUtils.mkdir_p "#{OUTPUT_DIR}/new/materials"
 FileUtils.mkdir_p "#{OUTPUT_DIR}/old/buildings"
 FileUtils.mkdir_p "#{OUTPUT_DIR}/old/materials"
 
-if ARGV.size > 0
-  ARGV.each { |name| make_page(name) }
-else
-  make_page_all
-end
-
-
+ARGV.each { |name| make_page(name) }

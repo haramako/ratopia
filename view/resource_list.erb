@@ -1,0 +1,22 @@
+** <%=category%>資源一覧
+
+<%- if category == '食べ物' -%>
+|アイコン|名前|効果|その他効果|需要層|説明|
+<%- resources.each do |r| -%>
+|<%=h_icon(r,40,40,name:false)%>|[[<%=r.name%>]]|<%=r.effect%>|<%=r.effect2%>|<%= h_class(r.target_class) %>|<%=h_txt(r.desc)%>|
+<%- end -%>
+<%- end -%>
+
+<%- if category == '生活用品' -%>
+|アイコン|名前|効果|その他効果|需要層|説明|
+<%- resources.each do |r| -%>
+|<%=h_icon(r,40,40,name:false)%>|[[<%=r.name%>]]|<%=r.effect%>|<%=r.effect2%>|<%= h_class(r.target_class) %>|<%=h_txt(r.desc)%>|
+<%- end -%>
+<%- end -%>
+
+<%- if category == '材料' -%>
+|アイコン|名前|説明|
+<%- resources.each do |r| -%>
+|<%=h_icon(r,40,40,name:false)%>|[[<%=r.name%>]]|<%=h_txt(r.desc)%>|
+<%- end -%>
+<%- end -%>

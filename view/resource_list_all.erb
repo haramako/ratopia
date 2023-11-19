@@ -1,6 +1,6 @@
 ** 施設一覧
 <%- categories.each do |category| -%>
-*** <%= category %>
+|>|>|>|>|>|>|>|>|CENTER:BGCOLOR(#864300):<%= category %>|
   <%- resource_by_categories[category].each_slice(12) do |slice|
      items = (slice+Array.new(12)).take(9).map do |r|
        if r
@@ -11,5 +11,5 @@
      end
   -%>
 |<%= items.join('|') %>|
-  <%- end %>
+  <%- end -%>
 <%- end -%>
