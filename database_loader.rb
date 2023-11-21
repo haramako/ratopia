@@ -124,10 +124,15 @@ class DatabaseLoader
         row['service_effect'],
         parse_class(row['service_target_class']),
         row['service_price'].to_i,
+        row['service_num'].to_i,
         parse_material_number_list(row['service_cost']),
         row['service_cost_amount'].to_i,
+        row['worker_salary'].to_i,
+        row['only_one'] != '',
+        row['get_froms'].split(','),
+        row['get_resources'].split(','),
        )
-      
+
       b.products = parse_building_products(row)
       b.products.each {|p| p.building = b.name }
 

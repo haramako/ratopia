@@ -9,11 +9,16 @@ class Material < Struct.new(:name, :category, :get_by, :price, :effect, :effect2
   attr_accessor :building_used_by
 end
 
-class Building < Struct.new(:name, :category, :cost, :w, :h, :effect, :products,
-                      :has_image, :has_main_image,
-                      :desc, :research_cost, :research_prerequired, :inputs,
-                      :on_ground, :has_worker, :hp,
-                      :service_effect, :service_target_class, :service_price, :service_cost, :service_cost_amount)
+class Building < Struct.new(
+        :name, :category, :cost, :w, :h, :effect, :products,
+        :has_image, :has_main_image,
+        :desc, :research_cost, :research_prerequired, :inputs,
+        :on_ground, :has_worker, :hp,
+        :service_effect, :service_target_class, :service_price, :service_num,
+        :service_cost, :service_cost_amount,
+        :worker_salary, :only_one,
+        :get_froms, :get_resources,
+      )
 end
 
 class Product < Struct.new(:product, :inputs, :cost)
@@ -53,6 +58,10 @@ class Database
           verify_material_name(row.product[0], "product of #{b.name}")
           verify_resource_number_list(row.inputs, "product of #{b.name} #{i}")
         end
+      end
+
+      b.get_resources.each do |row|
+        verify_material_name(row, "get_resources of #{b.name}")
       end
     end
   end

@@ -1,16 +1,24 @@
 ** 基礎データ
 |RIGHT:名前|<%=r.name%>|RIGHT:カテゴリー|<%=r.category%>|CENTER:MIDDLE:<%=h_icon(r,160,160,name:false,link:false)%>|
 |RIGHT:価格|<%=r.price%>|RIGHT:需要層|<%=h_class r.target_class%>|~|
-|.||||~|
+|RIGHT:取得方法|<%=r.get_by%>|RIGHT:利用施設|[[<%=r.building_used_by%>]]|~|
 |RIGHT:効果|>|>|<%=r.effect%> <%=r.effect2%>|~|
 |>|>|>|>|<%=r.desc%>|
 |<%=blank(100,1)%>|<%=blank(160,1)%>|<%=blank(100,1)%>|<%=blank(160,1)%>|<%=blank(200,1)%>|
 
-<%- if products && !products.empty? -%>
-** 生産物
+<%- unless products&.empty? -%>
+** 生産方法
 |番号|生産施設　　　　　　　　|材料　　　　　　　　　　　　　　　　　　　　　　　　　　|生産物　　　　　　|コスト　|
 <%- products.each.with_index do |pb,i| p,b = pb -%>
-|<%=i+1%>|<%=h_icon(b)%>|<%=h_item_list(p.inputs)%>|<%=h_item(p.product)%>|<%=p.cost%>|
+|<%=i+1%>|[[<%=b%>]]|<%=h_item_list(p.inputs)%>|<%=h_item(p.product)%>|<%=p.cost%>|
+<%- end -%>
+<%- end -%>
+
+<%- unless $db.products_by_output(r)&.empty? -%>
+** 材料としての使用方法
+|番号|生産施設　　　　　　　　|材料　　　　　　　　　　　　　　　　　　　　　　　　　　|生産物　　　　　　|コスト　|
+<%- $db.products_by_output(r).each.with_index do |p,i|-%>
+|<%=i+1%>|[[<%=p.building%>]]|<%=h_item_list(p.inputs)%>|<%=h_item(p.product)%>|<%=p.cost%>|
 <%- end -%>
 <%- end -%>
 

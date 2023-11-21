@@ -97,6 +97,9 @@ def graph_make_from(db, filename, target_class)
 end
 
 FileUtils.mkdir_p('output')
+pp db.find('ステーキ')
+exit
+
 graph_make_from(db, 'output/production_graph0.jpg', 0)
 graph_make_from(db, 'output/production_graph1.jpg', 1)
 graph_make_from(db, 'output/production_graph2.jpg', 2)

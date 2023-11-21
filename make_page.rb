@@ -84,17 +84,18 @@ def h_item(name_num,*list,**args)
 end
 
 def h_item_list(items,*list,**args)
-  items.map{|i| h_item(i,*list,**args)}.join(", ")
+  separator = (items[0].is_a?(Array) ? ', ' : '')
+  items.map{|i| h_item(i,*list,**args)}.join(separator)
 end
 
 def h_class(n)
   case n
   when 1
     '中産階級以上'
-  when 1
+  when 2
     '上流階級以上'
   else
-    '全階級'
+    ''
   end
 end
 
@@ -137,16 +138,15 @@ end
 def make_building_list_page
   additional_data = $db.buildings.values.map do |b|
     all_inputs = b.products.flat_map{|p| p.inputs.map{|i| i[0]}}.uniq
-    all_outputs = b.products.flat_map{|p| p.product[0]}.uniq
+    all_outputs = b.products.flat_map{|p| p.product[0]}.uniq + b.get_resources
     [b.name, {all_inputs:, all_outputs:}]
   end
   building_by_categories = $db.buildings.values.group_by{|b| b.category}
 
   # アテゴリごと
   Database::BUILDING_CATEGORIES.each do |category|
-    out = template('building_list').result_with_hash({title: "#{category}施設リスト", buildings: building_by_categories[category], additional_data: Hash[additional_data]})
+    out = template('building_list').result_with_hash({category:, buildings: building_by_categories[category], additional_data: Hash[additional_data]})
     output_page(category, out)
-    exit if category == '生産'
   end
 
   # 全リスト
@@ -159,12 +159,12 @@ def make_resource_list_page
 
   # アテゴリごと
   Database::RESOURCE_CATEGORIES.each do |category|
-    out = template('resource_list').result_with_hash({resources: resource_by_categories[category]})
+    out = template('resource_list').result_with_hash({category:, resources: resource_by_categories[category]})
     output_page(category, out)
   end
 
   # 全リスト
-  out = template('resource_list_all').result_with_hash({categories:, resource_by_categories:})
+  out = template('resource_list_all').result_with_hash({resource_by_categories:})
   output_page('資源一覧', out)
 end
 
@@ -188,6 +188,7 @@ def make_resource_pages
 end
 
 def make_page(name)
+  puts name
   case
   when b = $db.buildings[name]
     make_building_page(b)
