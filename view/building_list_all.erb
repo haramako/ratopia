@@ -1,5 +1,5 @@
 ** 施設一覧
-<%- categories.each do |category| -%>
+<%- Database::BUILDING_CATEGORIES.each do |category| -%>
 |>|>|>|>|>|>|>|CENTER:BGCOLOR(#864300):<%= category %>|
   <%- building_by_categories[category].each_slice(8) do |slice|
      items = (slice+Array.new(8)).take(8).map do |b|

@@ -128,10 +128,8 @@ class DatabaseLoader
         row['service_cost_amount'].to_i,
        )
       
-      if b.category == '生産' || b.category == '原材料'
-        b.products = parse_building_products(row)
-        b.products.each {|p| p.building = b.name }
-      end
+      b.products = parse_building_products(row)
+      b.products.each {|p| p.building = b.name }
 
       list[b.name] = b
     end

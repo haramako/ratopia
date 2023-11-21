@@ -67,16 +67,24 @@ def h_icon(x,w=40,h=40,alt:nil, name:true, br:false, link:true,large:false)
   end
 end
 
+def h_check(b)
+  b ? '〇' : '×'
+end
+
 def h_img(filename,w,h)
   "&image(https://img.atwiki.jp/ratopia/pub/#{filename},width=#{w},height=#{h})"
 end
 
-def h_item(name_num)
-  "#{h_icon(name_num[0])} x #{name_num[1]}"
+def h_item(name_num,*list,**args)
+  if name_num.is_a?(Array)
+    "#{h_icon(name_num[0],*list,**args)} x #{name_num[1]}"
+  else
+    "#{h_icon(name_num,*list,**args)}"
+  end
 end
 
-def h_item_list(items)
-  items.map{|i| h_item(i)}.join(", ")
+def h_item_list(items,*list,**args)
+  items.map{|i| h_item(i,*list,**args)}.join(", ")
 end
 
 def h_class(n)
@@ -127,27 +135,31 @@ def output_page(page_name, out, base = nil)
 end
 
 def make_building_list_page
-  categories = ['基盤', '原材料', '生産', 'サービス', '軍事', '飾り', '王室']
+  additional_data = $db.buildings.values.map do |b|
+    all_inputs = b.products.flat_map{|p| p.inputs.map{|i| i[0]}}.uniq
+    all_outputs = b.products.flat_map{|p| p.product[0]}.uniq
+    [b.name, {all_inputs:, all_outputs:}]
+  end
   building_by_categories = $db.buildings.values.group_by{|b| b.category}
 
   # アテゴリごと
-  categories.each do |category|
-    out = template('building_list').result_with_hash({title: "#{category}施設リスト", buildings: building_by_categories[category]})
+  Database::BUILDING_CATEGORIES.each do |category|
+    out = template('building_list').result_with_hash({title: "#{category}施設リスト", buildings: building_by_categories[category], additional_data: Hash[additional_data]})
     output_page(category, out)
+    exit if category == '生産'
   end
 
   # 全リスト
-  out = template('building_list_all').result_with_hash({categories:, building_by_categories:})
+  out = template('building_list_all').result_with_hash({building_by_categories:})
   output_page('施設一覧', out)
 end
 
 def make_resource_list_page
-  categories = ['食べ物', '生活用品', '材料']
   resource_by_categories = $db.materials.values.group_by{|b| b.category}
 
   # アテゴリごと
-  categories.each do |category|
-    out = template('resource_list').result_with_hash({category:, resources: resource_by_categories[category]})
+  Database::RESOURCE_CATEGORIES.each do |category|
+    out = template('resource_list').result_with_hash({resources: resource_by_categories[category]})
     output_page(category, out)
   end
 

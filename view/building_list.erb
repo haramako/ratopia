@@ -1,6 +1,7 @@
 ** <%=title%>
 
-|名前　　　　　　|説明　　　　　　　　　　　　　|材料　　　　　　　　　　|研究コスト|
+|画像|名前|建築材料|生産される物|生産で使う物|研究コスト|
 <%- buildings.each do |b| -%>
-|<%=h_icon(b,80,80,br:true)%>|<%=h_txt(b.desc)%>|<%=h_item_list(b.inputs)%>|<%=b.research_cost%>|
+<%- a = additional_data[b.name] -%>
+|<%=h_icon(b,80,80,name:false,large:true)%>|<%=b.name%>|<%=h_item_list(b.inputs)%>|<%= h_item_list(a[:all_outputs],30,30,name:false) %>|<%= h_item_list(a[:all_inputs],30,30,name:false) %>|<%=b.research_cost%>|
 <%- end -%>

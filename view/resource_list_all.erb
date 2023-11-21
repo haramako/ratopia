@@ -1,5 +1,5 @@
 ** 施設一覧
-<%- categories.each do |category| -%>
+<%- Database::RESOURCE_CATEGORIES.each do |category| -%>
 |>|>|>|>|>|>|>|>|CENTER:BGCOLOR(#864300):<%= category %>|
   <%- resource_by_categories[category].each_slice(9) do |slice|
      items = (slice+Array.new(9)).take(9).map do |r|

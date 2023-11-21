@@ -1,16 +1,17 @@
 ** 基礎データ
 |RIGHT:名前|<%=b.name%>|RIGHT:カテゴリー|<%=b.category%>|TOP:<%=h_icon(b,80,80,name:false,link:false)%>|<%= b.has_main_image ? "&image(main_image.jpg,width=240)" : h_img('noimage.jpg',240,200) %>|
-|RIGHT:材料|[[木]]x1 [[草]]x1|RIGHT:コスト|<%=b.cost%>|~|~|
+|RIGHT:材料|[[木]]x1 [[草]]x1|RIGHT:建築費用|<%=b.cost%>|~|~|
 |||RIGHT:サイズ|幅<%=b.w%>x高さ<%=b.h%>|~|~|
 |RIGHT:前提研究|<%= b.research_prerequired != '' ? h_icon(b.research_prerequired) : '(なし)' %>|RIGHT:研究コスト|<%=b.research_prerequired%>|~|~|
+|RIGHT:耐久力|<%= b.hp %>|RIGHT:研究コスト|<%=b.research_prerequired%>|~|~|
+|RIGHT:市民が必要|<%= h_check(b.has_worker) %>|RIGHT:地面が必要|<%=h_check(b.on_ground)%>|~|~|
 |>|>|>|>|>|<%=h_txt b.desc %>|
 |<%=blank(80,1)%>|<%=blank(160,1)%>|<%=blank(80,1)%>|<%=blank(160,1)%>|<%=blank(80,1)%>|<%=blank(240,1)%>|
 
 <%- if b.products -%>
 ** 生産物
-|番号|材料|生産物|コスト|
+|番号|材料|生産物|作業量|
 <%- b.products.each.with_index do |p,i| -%>
-|<%=i+1%>|<%=h_item(p.product)%>|<%=h_item_list(p.inputs)%>|<%=p.cost%>|
+|<%=i+1%>|<%=h_item_list(p.inputs)%>|<%=h_item(p.product)%>|<%=p.cost%>|
 <%- end -%>
 <%- end -%>
-

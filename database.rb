@@ -22,6 +22,9 @@ end
 
 # Ratopiaデータベース
 class Database
+  RESOURCE_CATEGORIES = %w(食べ物 生活用品 材料)
+  BUILDING_CATEGORIES = %w(基盤 原材料 生産 サービス 軍事 飾り 王室)
+  
   attr_reader :materials, :buildings
   def initialize(_materials, _buildings)
     @materials = _materials
