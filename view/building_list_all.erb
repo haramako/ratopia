@@ -4,7 +4,7 @@
   <%- building_by_categories[category].each_slice(8) do |slice|
      items = (slice+Array.new(8)).take(8).map do |b|
        if b
-         "CENTER:#{h_icon(b,80,80,large:true,br:true)}"
+         "CENTER:#{h_icon(b,80,80,large:true,br:true)}&br()[[#{b.name}]]"
        else
 	 ''
        end

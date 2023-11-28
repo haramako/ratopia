@@ -1,0 +1,9354 @@
+{
+  "buildings": [
+    {
+      "name": "貯蔵庫",
+      "category": "基盤",
+      "cost": 50,
+      "w": 3,
+      "h": 2,
+      "effect": "貯蔵庫40",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "石材",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "簡易貯蔵庫",
+      "category": "基盤",
+      "cost": 30,
+      "w": 2,
+      "h": 2,
+      "effect": "貯蔵庫20",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 50,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "運搬所",
+      "category": "基盤",
+      "cost": 50,
+      "w": 2,
+      "h": 2,
+      "effect": "職業効果: 移動速度+20%,運搬量+3",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "ロープ",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "ベッド",
+      "category": "基盤",
+      "cost": 10,
+      "w": 2,
+      "h": 2,
+      "effect": "体力回復+1, 気力回復+100%",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木",
+          1
+        ],
+        [
+          "葉",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 30,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "２段ベッド",
+      "category": "基盤",
+      "cost": 50,
+      "w": 2,
+      "h": 3,
+      "effect": "体力回復+1, 気力回復+100%",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "葉",
+          4
+        ],
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "医療ベッド",
+      "category": "基盤",
+      "cost": 30,
+      "w": 2,
+      "h": 2,
+      "effect": "体力回復+3, 気力回復+150%",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "医薬品",
+          1
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 50,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "高級ベッド",
+      "category": "基盤",
+      "cost": 50,
+      "w": 2,
+      "h": 2,
+      "effect": "体力回復+2, 気力回復+200%",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "生地",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "土壁",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "移動速度+15%",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          2
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 50,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "木の壁",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "移動速度+15%",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          1
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 80,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "石の壁",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "移動速度+15%",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "石",
+          1
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 120,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "大理石の壁",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "移動速度+15%",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "石材",
+          1
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "粘板岩壁",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "移動速度+15%",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "粘板岩",
+          1
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 80,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "つる壁",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "移動速度+20%",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "蔓生の木",
+          0
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 80,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "砂岩壁",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "移動速度+15%",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "砂岩",
+          1
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 80,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "氷壁",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "移動速度+20%",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "氷を削って作った冷たい壁。",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "雪",
+          1
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 50,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "はしご",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "葉",
+          2
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 30,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "木製はしご",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木の棒",
+          2
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 30,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "草葉の屋根",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "上の水を吸収",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "葉",
+          2
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 30,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "瓦屋根",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "上の水を吸収",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "粘板岩",
+          1
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 30,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "鉄道",
+      "category": "基盤",
+      "cost": 10,
+      "w": 1,
+      "h": 1,
+      "effect": "線路に沿って高速移動できる",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 30,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "昇降場",
+      "category": "基盤",
+      "cost": 50,
+      "w": 3,
+      "h": 2,
+      "effect": "昇降路に沿って高速移動できる",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "歯車",
+          2
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "昇降路",
+      "category": "基盤",
+      "cost": 30,
+      "w": 1,
+      "h": 1,
+      "effect": "昇降路に沿って高速移動できる",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "ロープ",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 30,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "採集所",
+      "category": "原材料",
+      "cost": 30,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": true,
+      "desc": "周辺の指定自然物を採集する施設。\n草のような形をしたものはなんでも採集できる。",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "葉",
+          4
+        ],
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+        "野生穀物",
+        "草",
+        "花",
+        "サボテン",
+        "パピルス",
+        "洞窟キノコ",
+        "ベリーの茂み",
+        "おもしろ花",
+        "海草",
+        "発光海草"
+      ],
+      "get_resources": [
+        "穀物",
+        "葉",
+        "花びら",
+        "サボテンの花",
+        "パピルス",
+        "キノコ",
+        "ベリー",
+        "楽しい花",
+        "発光体"
+      ]
+    },
+    {
+      "name": "伐採所",
+      "category": "原材料",
+      "cost": 30,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          4
+        ],
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "狩り場",
+      "category": "原材料",
+      "cost": 50,
+      "w": 3,
+      "h": 2,
+      "effect": "職業効果:攻撃力+1, 気力減少+30%",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "葉",
+          4
+        ],
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+        "ウサギ",
+        "ミツバチ",
+        "コウモリ",
+        "アルマジロ",
+        "カイコ",
+        "カエル",
+        "カタツムリ",
+        "ヤドカリ"
+      ],
+      "get_resources": [
+        "ウサギ",
+        "ミツバチ",
+        "コウモリ",
+        "アルマジロ",
+        "カイコ",
+        "カエル",
+        "カタツムリ",
+        "ヤドカリ"
+      ]
+    },
+    {
+      "name": "貯水槽",
+      "category": "原材料",
+      "cost": 50,
+      "w": 4,
+      "h": 3,
+      "effect": "職業効果:移動速度+10%",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "葉",
+          4
+        ],
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "釣り場",
+      "category": "原材料",
+      "cost": 100,
+      "w": 2,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "ロープ",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "樹液採取所",
+      "category": "原材料",
+      "cost": 100,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "銅インゴット",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+        "広葉樹",
+        "蔓生の木",
+        "とげの木"
+      ],
+      "get_resources": [
+        "樹液",
+        "ゴム",
+        "茨の樹液"
+      ]
+    },
+    {
+      "name": "菜園",
+      "category": "原材料",
+      "cost": 50,
+      "w": 1,
+      "h": 1,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "泥",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+        "野生穀物",
+        "草",
+        "花",
+        "洞窟キノコ"
+      ],
+      "get_resources": [
+        "穀物",
+        "葉",
+        "花びら",
+        "キノコ"
+      ]
+    },
+    {
+      "name": "大型菜園",
+      "category": "原材料",
+      "cost": 100,
+      "w": 2,
+      "h": 1,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "泥",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+        "広葉樹",
+        "水晶の木",
+        "蔓生の木",
+        "とげの木",
+        "ベリーの茂み"
+      ],
+      "get_resources": [
+        "木",
+        "水晶",
+        "蔓生の木",
+        "茨",
+        "ベリー"
+      ]
+    },
+    {
+      "name": "樹木管理員",
+      "category": "原材料",
+      "cost": 100,
+      "w": 2,
+      "h": 2,
+      "effect": "範囲内の植物の成長+50%",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "葉",
+          4
+        ],
+        [
+          "花びら",
+          4
+        ],
+        [
+          "木材",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 190,
+      "only_one": false,
+      "get_froms": [
+        "野生穀物",
+        "草",
+        "花",
+        "広葉樹",
+        "ベリーの茂み",
+        "洞窟キノコ",
+        "サボテン",
+        "おもしろ花",
+        "パピルス",
+        "とげの木",
+        "蔓生の木",
+        "水晶の木"
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "露採集器",
+      "category": "原材料",
+      "cost": 100,
+      "w": 3,
+      "h": 2,
+      "effect": "毎日0時ごとに、水を生成します",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "クモの巣",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "穀物農園",
+      "category": "原材料",
+      "cost": 50,
+      "w": 4,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "穀物",
+            30
+          ],
+          "inputs": [
+            [
+              "水",
+              8
+            ]
+          ],
+          "cost": 4000
+        },
+        {
+          "product": [
+            "穀物",
+            30
+          ],
+          "inputs": [
+            [
+              "水",
+              4
+            ],
+            [
+              "骨粉",
+              4
+            ]
+          ],
+          "cost": 3000
+        },
+        {
+          "product": [
+            "穀物",
+            60
+          ],
+          "inputs": [
+            [
+              "水",
+              8
+            ],
+            [
+              "骨粉",
+              4
+            ],
+            [
+              "石灰粉",
+              2
+            ]
+          ],
+          "cost": 6000
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          8
+        ],
+        [
+          "木材",
+          4
+        ],
+        [
+          "穀物",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "ベリー農園",
+      "category": "原材料",
+      "cost": 50,
+      "w": 4,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "ベリー",
+            20
+          ],
+          "inputs": [
+            [
+              "水",
+              3
+            ],
+            [
+              "骨粉",
+              3
+            ]
+          ],
+          "cost": 3200
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          8
+        ],
+        [
+          "木材",
+          4
+        ],
+        [
+          "ベリー",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "キノコ農園",
+      "category": "原材料",
+      "cost": 50,
+      "w": 4,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "キノコ",
+            24
+          ],
+          "inputs": [
+            [
+              "木",
+              4
+            ]
+          ],
+          "cost": 2600
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          8
+        ],
+        [
+          "木材",
+          4
+        ],
+        [
+          "キノコ",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "草地",
+      "category": "原材料",
+      "cost": 100,
+      "w": 4,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "葉",
+            30
+          ],
+          "inputs": [
+            [
+              "水",
+              6
+            ],
+            [
+              "土",
+              1
+            ]
+          ],
+          "cost": 800
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          8
+        ],
+        [
+          "葉",
+          8
+        ],
+        [
+          "木材",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "花園",
+      "category": "原材料",
+      "cost": 100,
+      "w": 4,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "花びら",
+            18
+          ],
+          "inputs": [
+            [
+              "水",
+              8
+            ],
+            [
+              "土",
+              2
+            ]
+          ],
+          "cost": 1000
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          8
+        ],
+        [
+          "花びら",
+          8
+        ],
+        [
+          "木材",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "ウサギ牧場",
+      "category": "原材料",
+      "cost": 50,
+      "w": 6,
+      "h": 3,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "牛乳",
+            8
+          ],
+          "inputs": [
+            [
+              "葉",
+              8
+            ]
+          ],
+          "cost": 1000
+        },
+        {
+          "product": [
+            "ウサギ",
+            8
+          ],
+          "inputs": [
+            [
+              "花びら",
+              4
+            ],
+            [
+              "葉",
+              16
+            ]
+          ],
+          "cost": 2400
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "葉",
+          8
+        ],
+        [
+          "木材",
+          4
+        ],
+        [
+          "ウサギ",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "コウモリ牧場",
+      "category": "原材料",
+      "cost": 100,
+      "w": 6,
+      "h": 3,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "コウモリの体液",
+            2
+          ],
+          "inputs": [
+            [
+              "生肉",
+              1
+            ]
+          ],
+          "cost": 450
+        },
+        {
+          "product": [
+            "コウモリの体液",
+            2
+          ],
+          "inputs": [
+            [
+              "ベリー",
+              1
+            ]
+          ],
+          "cost": 450
+        },
+        {
+          "product": [
+            "コウモリ",
+            8
+          ],
+          "inputs": [
+            [
+              "生肉",
+              2
+            ],
+            [
+              "ベリー",
+              2
+            ]
+          ],
+          "cost": 1800
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "石",
+          8
+        ],
+        [
+          "木材",
+          4
+        ],
+        [
+          "コウモリ",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "養蜂場",
+      "category": "原材料",
+      "cost": 50,
+      "w": 6,
+      "h": 3,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "蜜蝋",
+            4
+          ],
+          "inputs": [
+            [
+              "花びら",
+              2
+            ]
+          ],
+          "cost": 650
+        },
+        {
+          "product": [
+            "はちみつ",
+            8
+          ],
+          "inputs": [
+            [
+              "花びら",
+              8
+            ]
+          ],
+          "cost": 1000
+        },
+        {
+          "product": [
+            "はちみつ",
+            8
+          ],
+          "inputs": [
+            [
+              "樹液",
+              4
+            ]
+          ],
+          "cost": 1000
+        },
+        {
+          "product": [
+            "ミツバチ",
+            4
+          ],
+          "inputs": [
+            [
+              "花びら",
+              4
+            ]
+          ],
+          "cost": 1600
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "花びら",
+          8
+        ],
+        [
+          "木材",
+          4
+        ],
+        [
+          "ミツバチ",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "養蚕所",
+      "category": "原材料",
+      "cost": 50,
+      "w": 6,
+      "h": 3,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "カイコの繭",
+            4
+          ],
+          "inputs": [
+            [
+              "葉",
+              6
+            ]
+          ],
+          "cost": 900
+        },
+        {
+          "product": [
+            "カイコ",
+            1
+          ],
+          "inputs": [
+            [
+              "葉",
+              4
+            ],
+            [
+              "はちみつ",
+              1
+            ]
+          ],
+          "cost": 1800
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "葉",
+          8
+        ],
+        [
+          "木材",
+          4
+        ],
+        [
+          "カイコ",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "製材所",
+      "category": "生産",
+      "cost": 30,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "木材",
+            2
+          ],
+          "inputs": [
+            [
+              "木",
+              1
+            ]
+          ],
+          "cost": 200
+        },
+        {
+          "product": [
+            "木材",
+            3
+          ],
+          "inputs": [
+            [
+              "蔓生の木",
+              1
+            ]
+          ],
+          "cost": 200
+        },
+        {
+          "product": [
+            "木の棒",
+            4
+          ],
+          "inputs": [
+            [
+              "木",
+              1
+            ]
+          ],
+          "cost": 200
+        },
+        {
+          "product": [
+            "木の棒",
+            6
+          ],
+          "inputs": [
+            [
+              "蔓生の木",
+              1
+            ]
+          ],
+          "cost": 200
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          4
+        ],
+        [
+          "木",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "研究所",
+      "category": "生産",
+      "cost": 100,
+      "w": 5,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "葉",
+          8
+        ],
+        [
+          "石",
+          4
+        ],
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 200,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "石工所",
+      "category": "生産",
+      "cost": 50,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "石材",
+            2
+          ],
+          "inputs": [
+            [
+              "石",
+              1
+            ]
+          ],
+          "cost": 400
+        },
+        {
+          "product": [
+            "砂",
+            8
+          ],
+          "inputs": [
+            [
+              "砂岩",
+              1
+            ]
+          ],
+          "cost": 450
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "石",
+          4
+        ],
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "窯",
+      "category": "生産",
+      "cost": 100,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "炭",
+            4
+          ],
+          "inputs": [
+            [
+              "木",
+              2
+            ]
+          ],
+          "cost": 600
+        },
+        {
+          "product": [
+            "炭",
+            5
+          ],
+          "inputs": [
+            [
+              "蔓生の木",
+              2
+            ]
+          ],
+          "cost": 600
+        },
+        {
+          "product": [
+            "陶磁器",
+            3
+          ],
+          "inputs": [
+            [
+              "土",
+              1
+            ],
+            [
+              "水",
+              1
+            ]
+          ],
+          "cost": 600
+        },
+        {
+          "product": [
+            "陶磁器",
+            4
+          ],
+          "inputs": [
+            [
+              "泥",
+              1
+            ]
+          ],
+          "cost": 600
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          8
+        ],
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "製薬所",
+      "category": "生産",
+      "cost": 100,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "コウモリ水薬",
+            3
+          ],
+          "inputs": [
+            [
+              "コウモリの体液",
+              2
+            ]
+          ],
+          "cost": 600
+        },
+        {
+          "product": [
+            "医薬品",
+            2
+          ],
+          "inputs": [
+            [
+              "葉",
+              1
+            ],
+            [
+              "花びら",
+              2
+            ],
+            [
+              "炭",
+              1
+            ]
+          ],
+          "cost": 600
+        },
+        {
+          "product": [
+            "医薬品",
+            2
+          ],
+          "inputs": [
+            [
+              "サボテンの花",
+              1
+            ]
+          ],
+          "cost": 600
+        },
+        {
+          "product": [
+            "医薬品",
+            2
+          ],
+          "inputs": [
+            [
+              "生地",
+              1
+            ],
+            [
+              "茨の樹液",
+              1
+            ]
+          ],
+          "cost": 600
+        },
+        {
+          "product": [
+            "医薬品",
+            2
+          ],
+          "inputs": [
+            [
+              "サボテンの花",
+              1
+            ]
+          ],
+          "cost": 600
+        },
+        {
+          "product": [
+            "再生のポーション",
+            1
+          ],
+          "inputs": [
+            [
+              "粘液",
+              2
+            ],
+            [
+              "水",
+              2
+            ]
+          ],
+          "cost": 900
+        },
+        {
+          "product": [
+            "再生のポーション",
+            1
+          ],
+          "inputs": [
+            [
+              "カエル",
+              1
+            ],
+            [
+              "キノコ",
+              1
+            ],
+            [
+              "水",
+              3
+            ]
+          ],
+          "cost": 900
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "葉",
+          8
+        ],
+        [
+          "木材",
+          8
+        ],
+        [
+          "木の棒",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "製粉所",
+      "category": "生産",
+      "cost": 100,
+      "w": 4,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "穀物粉",
+            6
+          ],
+          "inputs": [
+            [
+              "穀物",
+              3
+            ]
+          ],
+          "cost": 550
+        },
+        {
+          "product": [
+            "油",
+            3
+          ],
+          "inputs": [
+            [
+              "花びら",
+              4
+            ]
+          ],
+          "cost": 450
+        },
+        {
+          "product": [
+            "油",
+            3
+          ],
+          "inputs": [
+            [
+              "魚",
+              1
+            ]
+          ],
+          "cost": 450
+        },
+        {
+          "product": [
+            "油",
+            4
+          ],
+          "inputs": [
+            [
+              "発光体",
+              2
+            ]
+          ],
+          "cost": 450
+        },
+        {
+          "product": [
+            "石灰粉",
+            4
+          ],
+          "inputs": [
+            [
+              "石灰岩",
+              1
+            ]
+          ],
+          "cost": 600
+        },
+        {
+          "product": [
+            "石灰粉",
+            6
+          ],
+          "inputs": [
+            [
+              "サンゴ",
+              1
+            ]
+          ],
+          "cost": 600
+        },
+        {
+          "product": [
+            "骨粉",
+            4
+          ],
+          "inputs": [
+            [
+              "骨",
+              2
+            ]
+          ],
+          "cost": 650
+        },
+        {
+          "product": [
+            "おもしろ粉",
+            6
+          ],
+          "inputs": [
+            [
+              "楽しい花",
+              1
+            ]
+          ],
+          "cost": 3232
+        },
+        {
+          "product": [
+            "塩",
+            8
+          ],
+          "inputs": [
+            [
+              "岩塩",
+              1
+            ]
+          ],
+          "cost": 600
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "石材",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "パン屋",
+      "category": "生産",
+      "cost": 100,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "パン",
+            2
+          ],
+          "inputs": [
+            [
+              "穀物粉",
+              2
+            ],
+            [
+              "水",
+              1
+            ]
+          ],
+          "cost": 450
+        },
+        {
+          "product": [
+            "チーズ",
+            3
+          ],
+          "inputs": [
+            [
+              "牛乳",
+              3
+            ],
+            [
+              "塩",
+              1
+            ]
+          ],
+          "cost": 500
+        },
+        {
+          "product": [
+            "ケーキ",
+            3
+          ],
+          "inputs": [
+            [
+              "穀物粉",
+              3
+            ],
+            [
+              "ベリー",
+              3
+            ],
+            [
+              "牛乳",
+              2
+            ]
+          ],
+          "cost": 800
+        },
+        {
+          "product": [
+            "アイスクリーム",
+            3
+          ],
+          "inputs": [
+            [
+              "雪",
+              1
+            ],
+            [
+              "樹液",
+              2
+            ],
+            [
+              "牛乳",
+              1
+            ]
+          ],
+          "cost": 900
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "屠畜場",
+      "category": "生産",
+      "cost": 50,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "生肉",
+            5
+          ],
+          "inputs": [
+            [
+              "ウサギ",
+              1
+            ]
+          ],
+          "cost": 700
+        },
+        {
+          "product": [
+            "生肉",
+            4
+          ],
+          "inputs": [
+            [
+              "カエル",
+              1
+            ]
+          ],
+          "cost": 500
+        },
+        {
+          "product": [
+            "皮",
+            4
+          ],
+          "inputs": [
+            [
+              "ウサギ",
+              1
+            ]
+          ],
+          "cost": 500
+        },
+        {
+          "product": [
+            "皮",
+            8
+          ],
+          "inputs": [
+            [
+              "アルマジロ",
+              1
+            ]
+          ],
+          "cost": 800
+        },
+        {
+          "product": [
+            "骨",
+            4
+          ],
+          "inputs": [
+            [
+              "ウサギ",
+              1
+            ]
+          ],
+          "cost": 500
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "木の棒",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "革工房",
+      "category": "生産",
+      "cost": 50,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "革袋",
+            3
+          ],
+          "inputs": [
+            [
+              "皮",
+              2
+            ]
+          ],
+          "cost": 550
+        },
+        {
+          "product": [
+            "靴",
+            4
+          ],
+          "inputs": [
+            [
+              "皮",
+              2
+            ],
+            [
+              "道具",
+              1
+            ]
+          ],
+          "cost": 900
+        },
+        {
+          "product": [
+            "靴",
+            4
+          ],
+          "inputs": [
+            [
+              "皮",
+              2
+            ],
+            [
+              "ゴム",
+              1
+            ]
+          ],
+          "cost": 900
+        },
+        {
+          "product": [
+            "紙",
+            4
+          ],
+          "inputs": [
+            [
+              "皮",
+              2
+            ]
+          ],
+          "cost": 800
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "木の棒",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "調理場",
+      "category": "生産",
+      "cost": 50,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "焼き肉",
+            3
+          ],
+          "inputs": [
+            [
+              "生肉",
+              2
+            ],
+            [
+              "塩",
+              1
+            ]
+          ],
+          "cost": 650
+        },
+        {
+          "product": [
+            "焼きキノコ",
+            3
+          ],
+          "inputs": [
+            [
+              "キノコ",
+              3
+            ]
+          ],
+          "cost": 400
+        },
+        {
+          "product": [
+            "焼き魚",
+            2
+          ],
+          "inputs": [
+            [
+              "魚",
+              1
+            ]
+          ],
+          "cost": 400
+        },
+        {
+          "product": [
+            "焼き魚",
+            3
+          ],
+          "inputs": [
+            [
+              "アンコウ",
+              1
+            ]
+          ],
+          "cost": 500
+        },
+        {
+          "product": [
+            "ステーキ",
+            3
+          ],
+          "inputs": [
+            [
+              "生肉",
+              3
+            ],
+            [
+              "キノコ",
+              3
+            ],
+            [
+              "塩",
+              2
+            ]
+          ],
+          "cost": 900
+        },
+        {
+          "product": [
+            "パスタ",
+            3
+          ],
+          "inputs": [
+            [
+              "生肉",
+              2
+            ],
+            [
+              "穀物粉",
+              3
+            ],
+            [
+              "チーズ",
+              1
+            ]
+          ],
+          "cost": 800
+        },
+        {
+          "product": [
+            "パスタ",
+            3
+          ],
+          "inputs": [
+            [
+              "ヤドカリ",
+              1
+            ],
+            [
+              "穀物粉",
+              3
+            ],
+            [
+              "油",
+              1
+            ]
+          ],
+          "cost": 800
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木の棒",
+          4
+        ],
+        [
+          "石材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "紡織所",
+      "category": "生産",
+      "cost": 50,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "生地",
+            3
+          ],
+          "inputs": [
+            [
+              "葉",
+              5
+            ]
+          ],
+          "cost": 500
+        },
+        {
+          "product": [
+            "シルク",
+            4
+          ],
+          "inputs": [
+            [
+              "カイコの繭",
+              4
+            ]
+          ],
+          "cost": 1200
+        },
+        {
+          "product": [
+            "ロープ",
+            3
+          ],
+          "inputs": [
+            [
+              "葉",
+              3
+            ],
+            [
+              "木の棒",
+              1
+            ]
+          ],
+          "cost": 500
+        },
+        {
+          "product": [
+            "ロープ",
+            3
+          ],
+          "inputs": [
+            [
+              "蔓生の木",
+              1
+            ]
+          ],
+          "cost": 500
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "木の棒",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "裁断所",
+      "category": "生産",
+      "cost": 100,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "衣服",
+            3
+          ],
+          "inputs": [
+            [
+              "生地",
+              2
+            ]
+          ],
+          "cost": 850
+        },
+        {
+          "product": [
+            "シルク服",
+            3
+          ],
+          "inputs": [
+            [
+              "シルク",
+              3
+            ],
+            [
+              "染料",
+              2
+            ]
+          ],
+          "cost": 1100
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "生地",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "木工所",
+      "category": "生産",
+      "cost": 50,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "道具",
+            3
+          ],
+          "inputs": [
+            [
+              "木の棒",
+              3
+            ]
+          ],
+          "cost": 450
+        },
+        {
+          "product": [
+            "酒樽",
+            2
+          ],
+          "inputs": [
+            [
+              "木材",
+              3
+            ]
+          ],
+          "cost": 600
+        },
+        {
+          "product": [
+            "歯車",
+            2
+          ],
+          "inputs": [
+            [
+              "木材",
+              1
+            ],
+            [
+              "銅インゴット",
+              1
+            ]
+          ],
+          "cost": 800
+        },
+        {
+          "product": [
+            "木製家具",
+            2
+          ],
+          "inputs": [
+            [
+              "木材",
+              4
+            ],
+            [
+              "銅インゴット",
+              1
+            ]
+          ],
+          "cost": 1400
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "木の棒",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "手工芸工房",
+      "category": "生産",
+      "cost": 50,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "キャンドル",
+            3
+          ],
+          "inputs": [
+            [
+              "蜜蝋",
+              2
+            ],
+            [
+              "道具",
+              1
+            ]
+          ],
+          "cost": 500
+        },
+        {
+          "product": [
+            "キャンドル",
+            3
+          ],
+          "inputs": [
+            [
+              "茨の樹液",
+              1
+            ],
+            [
+              "はちみつ",
+              1
+            ],
+            [
+              "ロープ",
+              1
+            ]
+          ],
+          "cost": 500
+        },
+        {
+          "product": [
+            "ガム",
+            2
+          ],
+          "inputs": [
+            [
+              "おもしろ粉",
+              1
+            ],
+            [
+              "ゴム",
+              2
+            ]
+          ],
+          "cost": 1000
+        },
+        {
+          "product": [
+            "ガム",
+            2
+          ],
+          "inputs": [
+            [
+              "はちみつ",
+              2
+            ],
+            [
+              "茨の樹液",
+              2
+            ]
+          ],
+          "cost": 900
+        },
+        {
+          "product": [
+            "紙",
+            6
+          ],
+          "inputs": [
+            [
+              "パピルス",
+              4
+            ]
+          ],
+          "cost": 1200
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "調香所",
+      "category": "生産",
+      "cost": 200,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "石鹸",
+            3
+          ],
+          "inputs": [
+            [
+              "油",
+              1
+            ],
+            [
+              "炭",
+              1
+            ],
+            [
+              "花びら",
+              1
+            ]
+          ],
+          "cost": 550
+        },
+        {
+          "product": [
+            "石鹸",
+            4
+          ],
+          "inputs": [
+            [
+              "油",
+              1
+            ],
+            [
+              "石灰粉",
+              1
+            ]
+          ],
+          "cost": 700
+        },
+        {
+          "product": [
+            "石鹸",
+            4
+          ],
+          "inputs": [
+            [
+              "サボテンの花",
+              1
+            ],
+            [
+              "茨の樹液",
+              1
+            ]
+          ],
+          "cost": 700
+        },
+        {
+          "product": [
+            "香水",
+            3
+          ],
+          "inputs": [
+            [
+              "ガラス瓶",
+              3
+            ],
+            [
+              "カエル",
+              1
+            ],
+            [
+              "花びら",
+              1
+            ]
+          ],
+          "cost": 1000
+        },
+        {
+          "product": [
+            "香水",
+            3
+          ],
+          "inputs": [
+            [
+              "ガラス瓶",
+              3
+            ],
+            [
+              "サボテンの花",
+              3
+            ]
+          ],
+          "cost": 1000
+        },
+        {
+          "product": [
+            "香水",
+            3
+          ],
+          "inputs": [
+            [
+              "ガラス瓶",
+              3
+            ],
+            [
+              "茨の樹液",
+              3
+            ],
+            [
+              "水",
+              1
+            ]
+          ],
+          "cost": 1000
+        },
+        {
+          "product": [
+            "化粧品",
+            3
+          ],
+          "inputs": [
+            [
+              "はちみつ",
+              2
+            ],
+            [
+              "染料",
+              2
+            ],
+            [
+              "油",
+              3
+            ]
+          ],
+          "cost": 1000
+        },
+        {
+          "product": [
+            "化粧品",
+            3
+          ],
+          "inputs": [
+            [
+              "カタツムリ",
+              1
+            ],
+            [
+              "油",
+              3
+            ],
+            [
+              "炭",
+              3
+            ]
+          ],
+          "cost": 1000
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          8
+        ],
+        [
+          "ガラス",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "ブルワリー",
+      "category": "生産",
+      "cost": 50,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "ビール",
+            6
+          ],
+          "inputs": [
+            [
+              "酒樽",
+              2
+            ],
+            [
+              "穀物",
+              3
+            ],
+            [
+              "水",
+              3
+            ]
+          ],
+          "cost": 800
+        },
+        {
+          "product": [
+            "ビール",
+            9
+          ],
+          "inputs": [
+            [
+              "酒樽",
+              2
+            ],
+            [
+              "はちみつ",
+              3
+            ],
+            [
+              "水",
+              3
+            ]
+          ],
+          "cost": 1200
+        },
+        {
+          "product": [
+            "ワイン",
+            4
+          ],
+          "inputs": [
+            [
+              "ガラス瓶",
+              4
+            ],
+            [
+              "酒樽",
+              1
+            ],
+            [
+              "ベリー",
+              4
+            ]
+          ],
+          "cost": 900
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "染料工房",
+      "category": "生産",
+      "cost": 100,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "染料",
+            3
+          ],
+          "inputs": [
+            [
+              "花びら",
+              3
+            ],
+            [
+              "水",
+              1
+            ]
+          ],
+          "cost": 650
+        },
+        {
+          "product": [
+            "染料",
+            3
+          ],
+          "inputs": [
+            [
+              "サボテンの花",
+              2
+            ]
+          ],
+          "cost": 800
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "印刷所",
+      "category": "生産",
+      "cost": 200,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "本",
+            6
+          ],
+          "inputs": [
+            [
+              "紙",
+              5
+            ],
+            [
+              "染料",
+              1
+            ],
+            [
+              "道具",
+              1
+            ]
+          ],
+          "cost": 1500
+        },
+        {
+          "product": [
+            "本",
+            6
+          ],
+          "inputs": [
+            [
+              "シルク",
+              2
+            ],
+            [
+              "染料",
+              2
+            ],
+            [
+              "道具",
+              1
+            ]
+          ],
+          "cost": 1500
+        },
+        {
+          "product": [
+            "本",
+            6
+          ],
+          "inputs": [
+            [
+              "パピルス",
+              10
+            ],
+            [
+              "染料",
+              1
+            ],
+            [
+              "道具",
+              1
+            ]
+          ],
+          "cost": 1500
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          4
+        ],
+        [
+          "銅インゴット",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "溶鉱炉",
+      "category": "生産",
+      "cost": 200,
+      "w": 5,
+      "h": 4,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "銅インゴット",
+            2
+          ],
+          "inputs": [
+            [
+              "銅鉱石",
+              1
+            ],
+            [
+              "炭",
+              1
+            ]
+          ],
+          "cost": 800
+        },
+        {
+          "product": [
+            "金インゴット",
+            1
+          ],
+          "inputs": [
+            [
+              "金鉱石",
+              1
+            ],
+            [
+              "炭",
+              1
+            ]
+          ],
+          "cost": 1000
+        },
+        {
+          "product": [
+            "鉄インゴット",
+            2
+          ],
+          "inputs": [
+            [
+              "鉄鉱石",
+              1
+            ],
+            [
+              "炭",
+              1
+            ],
+            [
+              "石灰粉",
+              1
+            ]
+          ],
+          "cost": 1000
+        },
+        {
+          "product": [
+            "鉄インゴット",
+            2
+          ],
+          "inputs": [
+            [
+              "鉄鉱石",
+              1
+            ],
+            [
+              "炭",
+              1
+            ],
+            [
+              "骨粉",
+              1
+            ]
+          ],
+          "cost": 1000
+        },
+        {
+          "product": [
+            "ガラス",
+            2
+          ],
+          "inputs": [
+            [
+              "砂",
+              3
+            ],
+            [
+              "石灰粉",
+              1
+            ],
+            [
+              "炭",
+              1
+            ]
+          ],
+          "cost": 600
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          8
+        ],
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "造幣局",
+      "category": "生産",
+      "cost": 100,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "コイン",
+            10
+          ],
+          "inputs": [
+            [
+              "銅インゴット",
+              1
+            ]
+          ],
+          "cost": 800
+        },
+        {
+          "product": [
+            "金貨",
+            5
+          ],
+          "inputs": [
+            [
+              "金インゴット",
+              1
+            ]
+          ],
+          "cost": 800
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "鍛冶屋",
+      "category": "生産",
+      "cost": 100,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "ダンベル",
+            1
+          ],
+          "inputs": [
+            [
+              "銅インゴット",
+              1
+            ],
+            [
+              "道具",
+              1
+            ],
+            [
+              "木の棒",
+              1
+            ]
+          ],
+          "cost": 900
+        },
+        {
+          "product": [
+            "ダンベル",
+            1
+          ],
+          "inputs": [
+            [
+              "鉄インゴット",
+              1
+            ],
+            [
+              "道具",
+              1
+            ],
+            [
+              "木の棒",
+              1
+            ]
+          ],
+          "cost": 900
+        },
+        {
+          "product": [
+            "金の装飾具",
+            3
+          ],
+          "inputs": [
+            [
+              "金インゴット",
+              1
+            ],
+            [
+              "サンゴ",
+              3
+            ],
+            [
+              "道具",
+              1
+            ]
+          ],
+          "cost": 1800
+        },
+        {
+          "product": [
+            "金の装飾具",
+            3
+          ],
+          "inputs": [
+            [
+              "金インゴット",
+              1
+            ],
+            [
+              "宝石",
+              3
+            ]
+          ],
+          "cost": 1100
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          4
+        ],
+        [
+          "鉄インゴット",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "宝石細工所",
+      "category": "生産",
+      "cost": 200,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "宝石",
+            2
+          ],
+          "inputs": [
+            [
+              "水晶",
+              1
+            ],
+            [
+              "道具",
+              1
+            ]
+          ],
+          "cost": 800
+        },
+        {
+          "product": [
+            "珊瑚石",
+            2
+          ],
+          "inputs": [
+            [
+              "サンゴ",
+              2
+            ]
+          ],
+          "cost": 1800
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          4
+        ],
+        [
+          "鉄インゴット",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "ガラス工房",
+      "category": "生産",
+      "cost": 200,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+        {
+          "product": [
+            "ガラス瓶",
+            4
+          ],
+          "inputs": [
+            [
+              "ガラス",
+              2
+            ]
+          ],
+          "cost": 700
+        },
+        {
+          "product": [
+            "ガラス工芸品",
+            2
+          ],
+          "inputs": [
+            [
+              "ガラス",
+              2
+            ]
+          ],
+          "cost": 1100
+        },
+        {
+          "product": [
+            "ガラス工芸品",
+            2
+          ],
+          "inputs": [
+            [
+              "水晶",
+              2
+            ]
+          ],
+          "cost": 1400
+        }
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          4
+        ],
+        [
+          "ガラス",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "トイレ",
+      "category": "サービス",
+      "cost": 30,
+      "w": 2,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          4
+        ],
+        [
+          "木",
+          1
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "衛生+20",
+      "service_target_class": 0,
+      "service_price": 5,
+      "service_num": 1,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "マッサージベッド",
+      "category": "サービス",
+      "cost": 100,
+      "w": 2,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "生地",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "衛生+25, 才能+1, 気力減少率-10%",
+      "service_target_class": 0,
+      "service_price": 20,
+      "service_num": 1,
+      "service_cost": [
+        [
+          "油",
+          1
+        ]
+      ],
+      "service_cost_amount": 5,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "ランドリー",
+      "category": "サービス",
+      "cost": 100,
+      "w": 2,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "ロープ",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "衛生+30,生活用品の減少率-15%",
+      "service_target_class": 1,
+      "service_price": 10,
+      "service_num": 1,
+      "service_cost": [
+        [
+          "塩",
+          1
+        ]
+      ],
+      "service_cost_amount": 5,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "美容室",
+      "category": "サービス",
+      "cost": 100,
+      "w": 2,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "生地",
+          4
+        ],
+        [
+          "銅インゴット",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "衛生+35,才能+1,移動速度+10%",
+      "service_target_class": 2,
+      "service_price": 35,
+      "service_num": 2,
+      "service_cost": [
+        [
+          "道具",
+          1
+        ]
+      ],
+      "service_cost_amount": 4,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "歯の管理所",
+      "category": "サービス",
+      "cost": 100,
+      "w": 2,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "サンゴ",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "衛生+30,才能+1,食物減少率+10%",
+      "service_target_class": 1,
+      "service_price": 30,
+      "service_num": 2,
+      "service_cost": [
+        [
+          "ヤドカリ",
+          1
+        ]
+      ],
+      "service_cost_amount": 5,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "銭湯",
+      "category": "サービス",
+      "cost": 200,
+      "w": 5,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "生地",
+          8
+        ],
+        [
+          "鉄インゴット",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 200,
+      "service_effect": "衛生+30, 気力+20",
+      "service_target_class": 2,
+      "service_price": 30,
+      "service_num": 2,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "イベント会場",
+      "category": "サービス",
+      "cost": 50,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          4
+        ],
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "楽しみ+20",
+      "service_target_class": 0,
+      "service_price": 15,
+      "service_num": 2,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "闘技場",
+      "category": "サービス",
+      "cost": 50,
+      "w": 4,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          8
+        ],
+        [
+          "木材",
+          4
+        ],
+        [
+          "石材",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "楽しみ+25",
+      "service_target_class": 0,
+      "service_price": 15,
+      "service_num": 2,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "舞台",
+      "category": "サービス",
+      "cost": 100,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          4
+        ],
+        [
+          "生地",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 200,
+      "service_effect": "楽しみ+25, 知能+1",
+      "service_target_class": 1,
+      "service_price": 20,
+      "service_num": 2,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "アトリエ",
+      "category": "サービス",
+      "cost": 50,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "木の棒",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "楽しみ+30,知能+2",
+      "service_target_class": 1,
+      "service_price": 25,
+      "service_num": 1,
+      "service_cost": [
+        [
+          "染料",
+          1
+        ]
+      ],
+      "service_cost_amount": 5,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "居酒屋",
+      "category": "サービス",
+      "cost": 100,
+      "w": 4,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "木の棒",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "楽しみ+30,食べ物+20,楽しみ減少率-10%",
+      "service_target_class": 1,
+      "service_price": 20,
+      "service_num": 2,
+      "service_cost": [
+        [
+          "ビール",
+          1
+        ]
+      ],
+      "service_cost_amount": 4,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "おもしろ窟",
+      "category": "サービス",
+      "cost": 100,
+      "w": 5,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "葉",
+          8
+        ],
+        [
+          "木材",
+          8
+        ],
+        [
+          "生地",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "楽しみ+44,気力+66回復,気力減少率+33%,楽しみ減少率+33%",
+      "service_target_class": 2,
+      "service_price": 44,
+      "service_num": 2,
+      "service_cost": [
+        [
+          "楽しい花",
+          1
+        ]
+      ],
+      "service_cost_amount": 6,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "サロン",
+      "category": "サービス",
+      "cost": 200,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "生地",
+          8
+        ],
+        [
+          "ガラス",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "楽しみ+35,気力+20回復",
+      "service_target_class": 2,
+      "service_price": 30,
+      "service_num": 2,
+      "service_cost": [
+        [
+          "ワイン",
+          1
+        ]
+      ],
+      "service_cost_amount": 4,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "カタツムリ競走場",
+      "category": "サービス",
+      "cost": 200,
+      "w": 7,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "鉄インゴット",
+          8
+        ],
+        [
+          "蔓生の木",
+          8
+        ],
+        [
+          "粘板岩",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 300,
+      "service_effect": "楽しみ+35,筋力+1,才能+1,楽しみ減少率+10%",
+      "service_target_class": 1,
+      "service_price": 20,
+      "service_num": 4,
+      "service_cost": [
+        [
+          "カタツムリ",
+          1
+        ]
+      ],
+      "service_cost_amount": 5,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "学校",
+      "category": "サービス",
+      "cost": 100,
+      "w": 5,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "楽しみ+10,知能+3",
+      "service_target_class": 0,
+      "service_price": 15,
+      "service_num": 2,
+      "service_cost": [
+        [
+          "道具",
+          1
+        ]
+      ],
+      "service_cost_amount": 4,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "病院",
+      "category": "サービス",
+      "cost": 100,
+      "w": 4,
+      "h": 2,
+      "effect": "職業効果:移動速度+30%",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          4
+        ],
+        [
+          "生地",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "体力+50",
+      "service_target_class": 0,
+      "service_price": 60,
+      "service_num": 1,
+      "service_cost": [
+        [
+          "医薬品",
+          1
+        ]
+      ],
+      "service_cost_amount": 3,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "ノミ取り施設",
+      "category": "サービス",
+      "cost": 100,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "銅インゴット",
+          4
+        ],
+        [
+          "蔓生の木",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "衛生+30, 最大体力+20",
+      "service_target_class": 1,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "訓練所",
+      "category": "軍事",
+      "cost": 100,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          2
+        ],
+        [
+          "木材",
+          12
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 150,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "兵営",
+      "category": "軍事",
+      "cost": 200,
+      "w": 4,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          8
+        ],
+        [
+          "石材",
+          8
+        ],
+        [
+          "銅インゴット",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 300,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 250,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "戦闘教育院",
+      "category": "軍事",
+      "cost": 300,
+      "w": 5,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          8
+        ],
+        [
+          "石材",
+          8
+        ],
+        [
+          "鉄インゴット",
+          12
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 300,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 450,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "戦争の神殿",
+      "category": "軍事",
+      "cost": 200,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          8
+        ],
+        [
+          "石材",
+          8
+        ],
+        [
+          "蔓生の木",
+          12
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 225,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "集結所",
+      "category": "軍事",
+      "cost": 200,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "木の棒",
+          8
+        ],
+        [
+          "生地",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "木柵",
+      "category": "軍事",
+      "cost": 30,
+      "w": 1,
+      "h": 1,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "トゲの木柵",
+      "category": "軍事",
+      "cost": 50,
+      "w": 1,
+      "h": 1,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "茨",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "木製ドア",
+      "category": "軍事",
+      "cost": 30,
+      "w": 1,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "鉄の門",
+      "category": "軍事",
+      "cost": 100,
+      "w": 1,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "鉄インゴット",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "トゲのわな",
+      "category": "軍事",
+      "cost": 50,
+      "w": 1,
+      "h": 1,
+      "effect": "対象に5のダメージ, 作動するごとに体力-10",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "木の棒",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 50,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "毒針罠",
+      "category": "軍事",
+      "cost": 50,
+      "w": 1,
+      "h": 1,
+      "effect": "対象に3のダメージと毒, 作動するごとに体力-10",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "木の棒",
+          4
+        ],
+        [
+          "サソリ",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 50,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "びっくりボックス",
+      "category": "軍事",
+      "cost": 100,
+      "w": 2,
+      "h": 1,
+      "effect": "対象を押し出す, 作動するごとに体力-10",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "銅インゴット",
+          4
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 50,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "地震の振り子",
+      "category": "軍事",
+      "cost": 200,
+      "w": 3,
+      "h": 2,
+      "effect": "天井が必要, 対象に6のダメージ, 作動するごとに体力-10",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "歯車",
+          4
+        ],
+        [
+          "鉄インゴット",
+          4
+        ],
+        [
+          "ロープ",
+          4
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 80,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "蜂の巣",
+      "category": "軍事",
+      "cost": 50,
+      "w": 1,
+      "h": 2,
+      "effect": "対象に4のダメージ, 作動するごとに体力-10",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "ミツバチ",
+          2
+        ],
+        [
+          "蜜蝋",
+          4
+        ]
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 80,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "土の壁紙",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "木材壁紙",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "草葉の壁紙",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "石の壁紙",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "大理石の壁紙",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "小型絵",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "中型絵",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "大型絵",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "小型石造",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "木製ベンチ",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "ネズミ型のベンチ",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "密林の椅子",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "旗",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "壁掛け旗",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "木箱",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "縄袋",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "木製の王座",
+      "category": "飾り",
+      "cost": 0,
+      "w": 0,
+      "h": 0,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+
+      ],
+      "on_ground": false,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "記念碑の下段部",
+      "category": "飾り",
+      "cost": 0,
+      "w": 6,
+      "h": 1,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "花びら",
+          20
+        ],
+        [
+          "石材",
+          20
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": true,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "記念期の中段部",
+      "category": "飾り",
+      "cost": 0,
+      "w": 6,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": false,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "石材",
+          20
+        ],
+        [
+          "金インゴット",
+          20
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 0,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": true,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "都市の入り口",
+      "category": "王室",
+      "cost": 10,
+      "w": 3,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木",
+          3
+        ],
+        [
+          "石",
+          3
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 50,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": true,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "研究テーブル",
+      "category": "王室",
+      "cost": 30,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 50,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "法典",
+      "category": "王室",
+      "cost": 50,
+      "w": 2,
+      "h": 4,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "石",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": true,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "市民名簿",
+      "category": "王室",
+      "cost": 50,
+      "w": 2,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "修理事務所",
+      "category": "王室",
+      "cost": 50,
+      "w": 2,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "ロープ",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 150,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "税務署",
+      "category": "王室",
+      "cost": 30,
+      "w": 2,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 50,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 150,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "牢屋",
+      "category": "王室",
+      "cost": 50,
+      "w": 1,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          2
+        ],
+        [
+          "石材",
+          2
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "警察署",
+      "category": "王室",
+      "cost": 200,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "生地",
+          8
+        ],
+        [
+          "銅インゴット",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 220,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "外交室",
+      "category": "王室",
+      "cost": 100,
+      "w": 3,
+      "h": 3,
+      "effect": "職業効果:犯罪を犯さない,攻撃力+5,移動速度+20%",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          4
+        ],
+        [
+          "生地",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": true,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "銀行",
+      "category": "王室",
+      "cost": 200,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          8
+        ],
+        [
+          "生地",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": true,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "貿易場",
+      "category": "王室",
+      "cost": 200,
+      "w": 3,
+      "h": 1,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "石材",
+          8
+        ],
+        [
+          "ロープ",
+          8
+        ],
+        [
+          "生地",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": true,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "ネズミの神壇",
+      "category": "王室",
+      "cost": 50,
+      "w": 1,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          4
+        ],
+        [
+          "花びら",
+          4
+        ],
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "犬の神壇",
+      "category": "王室",
+      "cost": 100,
+      "w": 3,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          4
+        ],
+        [
+          "木材",
+          8
+        ],
+        [
+          "木の棒",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "牛の神壇",
+      "category": "王室",
+      "cost": 100,
+      "w": 4,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "石材",
+          8
+        ],
+        [
+          "銅インゴット",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "墓地",
+      "category": "王室",
+      "cost": 50,
+      "w": 1,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          2
+        ],
+        [
+          "石",
+          1
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 50,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "火葬場",
+      "category": "王室",
+      "cost": 100,
+      "w": 3,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "木の棒",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "共同墓地",
+      "category": "王室",
+      "cost": 100,
+      "w": 5,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "土",
+          8
+        ],
+        [
+          "木材",
+          8
+        ],
+        [
+          "石材",
+          8
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": true,
+      "hp": 200,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 120,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "王室のベッド",
+      "category": "王室",
+      "cost": 50,
+      "w": 2,
+      "h": 2,
+      "effect": "体力回復+4",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "生地",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "郵便箱",
+      "category": "王室",
+      "cost": 50,
+      "w": 1,
+      "h": 2,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 100,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "鐘塔",
+      "category": "王室",
+      "cost": 100,
+      "w": 2,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "木材",
+          4
+        ],
+        [
+          "石材",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": false,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    },
+    {
+      "name": "王室の鍛冶屋",
+      "category": "王室",
+      "cost": 50,
+      "w": 5,
+      "h": 3,
+      "effect": "",
+      "products": [
+
+      ],
+      "has_image": true,
+      "has_main_image": false,
+      "desc": "TODO",
+      "research_cost": 0,
+      "research_prerequired": "",
+      "inputs": [
+        [
+          "石材",
+          8
+        ],
+        [
+          "炭",
+          4
+        ]
+      ],
+      "on_ground": true,
+      "has_worker": false,
+      "hp": 150,
+      "service_effect": "",
+      "service_target_class": 0,
+      "service_price": 0,
+      "service_num": 0,
+      "service_cost": [
+
+      ],
+      "service_cost_amount": 0,
+      "worker_salary": 0,
+      "only_one": true,
+      "get_froms": [
+
+      ],
+      "get_resources": [
+
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "穀物",
+      "category": "食べ物",
+      "get_by": "収集",
+      "price": 14,
+      "effect": "食べ物+20",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "キノコ",
+      "category": "食べ物",
+      "get_by": "収集",
+      "price": 12,
+      "effect": "食べ物+16",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "ベリー",
+      "category": "食べ物",
+      "get_by": "収集",
+      "price": 18,
+      "effect": "食べ物+24",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "生肉",
+      "category": "食べ物",
+      "get_by": "",
+      "price": 22,
+      "effect": "食べ物+25",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "牛乳",
+      "category": "食べ物",
+      "get_by": "",
+      "price": 15,
+      "effect": "食べ物+18",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "はちみつ",
+      "category": "食べ物",
+      "get_by": "",
+      "price": 20,
+      "effect": "食べ物+25",
+      "effect2": "気力減少率-10%",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "アンコウ",
+      "category": "食べ物",
+      "get_by": "釣り",
+      "price": 30,
+      "effect": "食べ物+40",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": false,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "魚",
+      "category": "食べ物",
+      "get_by": "釣り",
+      "price": 30,
+      "effect": "食べ物+40",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "パン",
+      "category": "食べ物",
+      "get_by": "",
+      "price": 40,
+      "effect": "食べ物+45",
+      "effect2": "食物減少率-10%",
+      "target_class": 1,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "チーズ",
+      "category": "食べ物",
+      "get_by": "",
+      "price": 35,
+      "effect": "食べ物+42",
+      "effect2": "最大体力+20",
+      "target_class": 1,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "焼き肉",
+      "category": "食べ物",
+      "get_by": "",
+      "price": 40,
+      "effect": "食べ物+45",
+      "effect2": "筋力+2",
+      "target_class": 1,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "焼きキノコ",
+      "category": "食べ物",
+      "get_by": "",
+      "price": 25,
+      "effect": "食べ物+28",
+      "effect2": "才能+2",
+      "target_class": 1,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "焼き魚",
+      "category": "食べ物",
+      "get_by": "",
+      "price": 35,
+      "effect": "食べ物+40",
+      "effect2": "知能+2",
+      "target_class": 1,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "ステーキ",
+      "category": "食べ物",
+      "get_by": "",
+      "price": 75,
+      "effect": "食べ物+60",
+      "effect2": "筋力+3,最大体力+30,食物減少率+10%",
+      "target_class": 2,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "パスタ",
+      "category": "食べ物",
+      "get_by": "",
+      "price": 70,
+      "effect": "食べ物+60",
+      "effect2": "筋力+2,才能+2,食物減少率+10%",
+      "target_class": 2,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "ケーキ",
+      "category": "食べ物",
+      "get_by": "",
+      "price": 75,
+      "effect": "食べ物+60",
+      "effect2": "才能+3,知能+3,食物減少率+10%",
+      "target_class": 2,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "アイスクリーム",
+      "category": "食べ物",
+      "get_by": "",
+      "price": 50,
+      "effect": "食べ物+60",
+      "effect2": "作業速度+20%,楽しみ+15",
+      "target_class": 2,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "油",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 20,
+      "effect": "生活用品+8",
+      "effect2": "才能+2",
+      "target_class": 0,
+      "use_by": true,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "陶磁器",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 20,
+      "effect": "生活用品+8",
+      "effect2": "食べ物減少率-10%",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "革袋",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 30,
+      "effect": "生活用品+8",
+      "effect2": "運搬量+2",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "キャンドル",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 35,
+      "effect": "生活用品+8",
+      "effect2": "知能+2",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "再生のポーション",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 35,
+      "effect": "生活用品+8",
+      "effect2": "体力回復+1",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "コウモリ水薬",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 38,
+      "effect": "生活用品+8",
+      "effect2": "筋力+1, 気力減少率-20%",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "靴",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 35,
+      "effect": "生活用品+12",
+      "effect2": "移動速度+20%",
+      "target_class": 1,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "石鹸",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 32,
+      "effect": "生活用品+12",
+      "effect2": "才能+1,回避率10%",
+      "target_class": 1,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "衣服",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 42,
+      "effect": "生活用品+12",
+      "effect2": "最大体力+20",
+      "target_class": 1,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "本",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 60,
+      "effect": "生活用品+12",
+      "effect2": "経験値+30%, 犯罪を犯さない",
+      "target_class": 1,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "ダンベル",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 65,
+      "effect": "生活用品+12",
+      "effect2": "筋力+3",
+      "target_class": 1,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "ガム",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 60,
+      "effect": "生活用品+16",
+      "effect2": "楽しみ減少率-10%, 食物減少率-10%",
+      "target_class": 2,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "化粧品",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 95,
+      "effect": "生活用品+16",
+      "effect2": "才能+3,回避率10%",
+      "target_class": 2,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "香水",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 100,
+      "effect": "生活用品+16",
+      "effect2": "知能+3,回避率10%",
+      "target_class": 2,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "シルク服",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 120,
+      "effect": "生活用品+16",
+      "effect2": "防御力+1,最大体力+30",
+      "target_class": 2,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "金の装飾具",
+      "category": "生活用品",
+      "get_by": "",
+      "price": 135,
+      "effect": "生活用品+16",
+      "effect2": "筋力+2,才能+2,知能+2",
+      "target_class": 2,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "土",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 2,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "固い木質の木。そのまま使うか、製材所で加工して便利に使える。",
+      "level": 0
+    },
+    {
+      "name": "石",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 8,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "葉",
+      "category": "材料",
+      "get_by": "収集",
+      "price": 3,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "花びら",
+      "category": "材料",
+      "get_by": "収集",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "木",
+      "category": "材料",
+      "get_by": "伐採",
+      "price": 6,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "水",
+      "category": "材料",
+      "get_by": "その他",
+      "price": 3,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "砂岩",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 8,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "石灰岩",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "粘板岩",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 10,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "岩塩",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 10,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "泥",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "粘液",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "蜜蝋",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 18,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "銅鉱石",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "鉄鉱石",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "金鉱石",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "水晶",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "雪",
+      "category": "材料",
+      "get_by": "採掘",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "ウサギ",
+      "category": "材料",
+      "get_by": "狩り",
+      "price": 35,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "ミツバチ",
+      "category": "材料",
+      "get_by": "狩り",
+      "price": 35,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "カイコ",
+      "category": "材料",
+      "get_by": "狩り",
+      "price": 20,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "カエル",
+      "category": "材料",
+      "get_by": "狩り",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "アルマジロ",
+      "category": "材料",
+      "get_by": "狩り",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "サソリ",
+      "category": "材料",
+      "get_by": "狩り",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "ヤドカリ",
+      "category": "材料",
+      "get_by": "狩り",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 2,
+      "use_by": true,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "コウモリ",
+      "category": "材料",
+      "get_by": "狩り",
+      "price": 35,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": false,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "コウモリの体液",
+      "category": "材料",
+      "get_by": "狩り",
+      "price": 35,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "カタツムリ",
+      "category": "材料",
+      "get_by": "狩り",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 2,
+      "use_by": true,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "クモ",
+      "category": "材料",
+      "get_by": "狩り",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "パピルス",
+      "category": "材料",
+      "get_by": "収集",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "サボテンの花",
+      "category": "材料",
+      "get_by": "収集",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "楽しい花",
+      "category": "材料",
+      "get_by": "収集",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 1,
+      "use_by": true,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "発光体",
+      "category": "材料",
+      "get_by": "収集",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "茨",
+      "category": "材料",
+      "get_by": "伐採",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "蔓生の木",
+      "category": "材料",
+      "get_by": "伐採",
+      "price": 6,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "サンゴ",
+      "category": "材料",
+      "get_by": "伐採",
+      "price": 38,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "樹液",
+      "category": "材料",
+      "get_by": "樹液",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "茨の樹液",
+      "category": "材料",
+      "get_by": "樹液",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "ゴム",
+      "category": "材料",
+      "get_by": "樹液",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "穀物の種",
+      "category": "材料",
+      "get_by": "その他",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "草の種",
+      "category": "材料",
+      "get_by": "その他",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "広葉樹の種",
+      "category": "材料",
+      "get_by": "その他",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "茨の種",
+      "category": "材料",
+      "get_by": "その他",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "蔓生の木の種",
+      "category": "材料",
+      "get_by": "その他",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "ベリーの種",
+      "category": "材料",
+      "get_by": "その他",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "木材",
+      "category": "材料",
+      "get_by": "",
+      "price": 12,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "木の棒",
+      "category": "材料",
+      "get_by": "",
+      "price": 6,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "石材",
+      "category": "材料",
+      "get_by": "",
+      "price": 24,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "皮",
+      "category": "材料",
+      "get_by": "",
+      "price": 20,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "穀物粉",
+      "category": "材料",
+      "get_by": "",
+      "price": 16,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "生地",
+      "category": "材料",
+      "get_by": "",
+      "price": 20,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "ロープ",
+      "category": "材料",
+      "get_by": "",
+      "price": 20,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "石灰粉",
+      "category": "材料",
+      "get_by": "",
+      "price": 15,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "砂",
+      "category": "材料",
+      "get_by": "",
+      "price": 6,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "骨",
+      "category": "材料",
+      "get_by": "",
+      "price": 20,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "骨粉",
+      "category": "材料",
+      "get_by": "",
+      "price": 25,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "おもしろ粉",
+      "category": "材料",
+      "get_by": "",
+      "price": 66,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "塩",
+      "category": "材料",
+      "get_by": "",
+      "price": 25,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "炭",
+      "category": "材料",
+      "get_by": "",
+      "price": 15,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "クモの巣",
+      "category": "材料",
+      "get_by": "",
+      "price": 20,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "医薬品",
+      "category": "材料",
+      "get_by": "",
+      "price": 50,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": true,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "紙",
+      "category": "材料",
+      "get_by": "",
+      "price": 30,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "カイコの繭",
+      "category": "材料",
+      "get_by": "",
+      "price": 25,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "シルク",
+      "category": "材料",
+      "get_by": "",
+      "price": 60,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "道具",
+      "category": "材料",
+      "get_by": "",
+      "price": 20,
+      "effect": "",
+      "effect2": "",
+      "target_class": 1,
+      "use_by": true,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "酒樽",
+      "category": "材料",
+      "get_by": "",
+      "price": 50,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "歯車",
+      "category": "材料",
+      "get_by": "",
+      "price": 70,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "銅インゴット",
+      "category": "材料",
+      "get_by": "",
+      "price": 60,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "金インゴット",
+      "category": "材料",
+      "get_by": "",
+      "price": 80,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "鉄インゴット",
+      "category": "材料",
+      "get_by": "",
+      "price": 75,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "ガラス",
+      "category": "材料",
+      "get_by": "",
+      "price": 55,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "ガラス瓶",
+      "category": "材料",
+      "get_by": "",
+      "price": 45,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "ビール",
+      "category": "材料",
+      "get_by": "",
+      "price": 40,
+      "effect": "",
+      "effect2": "",
+      "target_class": 1,
+      "use_by": true,
+      "has_image": false,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "ワイン",
+      "category": "材料",
+      "get_by": "",
+      "price": 100,
+      "effect": "",
+      "effect2": "",
+      "target_class": 2,
+      "use_by": true,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "染料",
+      "category": "材料",
+      "get_by": "",
+      "price": 30,
+      "effect": "",
+      "effect2": "",
+      "target_class": 1,
+      "use_by": true,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "ノクシリン",
+      "category": "材料",
+      "get_by": "その他",
+      "price": 0,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 0
+    },
+    {
+      "name": "木製家具",
+      "category": "材料",
+      "get_by": "",
+      "price": 125,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "コイン",
+      "category": "材料",
+      "get_by": "",
+      "price": 15,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "金貨",
+      "category": "材料",
+      "get_by": "",
+      "price": 35,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 1
+    },
+    {
+      "name": "宝石",
+      "category": "材料",
+      "get_by": "",
+      "price": 70,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "珊瑚石",
+      "category": "材料",
+      "get_by": "",
+      "price": 130,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    },
+    {
+      "name": "ガラス工芸品",
+      "category": "材料",
+      "get_by": "",
+      "price": 120,
+      "effect": "",
+      "effect2": "",
+      "target_class": 0,
+      "use_by": false,
+      "has_image": true,
+      "desc": "TODO",
+      "level": 2
+    }
+  ]
+}

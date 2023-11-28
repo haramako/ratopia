@@ -1,19 +1,20 @@
 ** 基礎データ
-|RIGHT:名前|<%=b.name%>|RIGHT:カテゴリー|<%=b.category%>|TOP:<%=h_icon(b,80,80,name:false,link:false)%>|<%= b.has_main_image ? "&image(main_image.jpg,width=240)" : h_img('noimage.jpg',240,200) %>|
-|RIGHT:建築資源|>|>|<%=h_item_list(b.inputs)%>|~|~|
-|RIGHT:建築費用|<%=b.cost%>|RIGHT:サイズ|幅<%=b.w%>x高さ<%=b.h%>|~|~|
-|RIGHT:前提研究|<%= b.research_prerequired != '' ? h_icon(b.research_prerequired) : '(なし)' %>|RIGHT:研究コスト|<%=b.research_prerequired%>|~|~|
-|RIGHT:耐久力|<%= b.hp %>|||~|~|
-|RIGHT:市民が必要|<%= h_check(b.has_worker) %><%=b.worker_salary!=0 ? "(賃金 #{b.worker_salary})":''%>|RIGHT:地面が必要|<%=h_check(b.on_ground)%>|~|~|
+|RIGHT:名前|<%=b.name%>|RIGHT:カテゴリー|<%=b.category%>|TOP:<%=h_icon(b,160,160,large:true,name:false,link:false)%>|
+|RIGHT:建築資源|>|>|<%=h_item_list(b.inputs)%>|~|
+|RIGHT:建築費用|<%=b.cost%>|RIGHT:サイズ|幅<%=b.w%>x高さ<%=b.h%>|~|
+|RIGHT:前提研究|<%=h_link b.research_prerequired %>|RIGHT:研究コスト|<%=b.research_cost%>|~|
+|RIGHT:耐久力|<%= b.hp %>|||~|
+|RIGHT:市民が必要|<%= h_check(b.has_worker) %><%=b.worker_salary!=0 ? "(賃金 #{b.worker_salary})":''%>|RIGHT:地面が必要|<%=h_check(b.on_ground)%>|~|
 <%- if b.service_effect != '' -%>
-|RIGHT:サービス効果|>|>|<%=b.service_effect%>|~|~|
-|RIGHT:サービス価格|<%=b.service_price %> |RIGHT:同時サービス人数|<%=b.service_num%>|~|~|
-|RIGHT:使用資源|<%=h_item_list(b.service_cost,30,30,name:false)%>|RIGHT:資源あたり人数|<%=b.service_cost_amount%>|~|~|
+|RIGHT:サービス効果|>|>|<%=b.service_effect%>|~|
+|RIGHT:対象階級|<%=h_class(b.service_target_class)%>|||~|
+|RIGHT:サービス価格|<%=b.service_price %>|RIGHT:同時サービス|<%=b.service_num%>|~|
+|RIGHT:使用資源|<%=h_item_list(b.service_cost,30,30,name:false)%>|RIGHT:資源あたり人数|<%=b.service_cost_amount%>|~|
 <%- else -%>
-|RIGHT:効果|>|>|<%=b.effect%>|~|~|
+|RIGHT:効果|>|>|<%=b.effect%>|~|
 <%- end -%>
-|>|>|>|>|>|<%=h_txt b.desc %>|
-|<%=blank(80,1)%>|<%=blank(160,1)%>|<%=blank(80,1)%>|<%=blank(160,1)%>|<%=blank(80,1)%>|<%=blank(240,1)%>|
+|>|>|>|>|<%=h_txt b.desc %>|
+|<%=blank(80,1)%>|<%=blank(160,1)%>|<%=blank(80,1)%>|<%=blank(160,1)%>|<%=blank(80,1)%>|
 
 <%- unless b.products&.empty? -%>
 ** 生産
@@ -22,3 +23,4 @@
 |<%=i+1%>|<%=h_item_list(p.inputs)%>|<%=h_item(p.product)%>|<%=p.cost%>|
 <%- end -%>
 <%- end -%>
+

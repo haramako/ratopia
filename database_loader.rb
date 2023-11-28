@@ -18,9 +18,11 @@ class DatabaseLoader
     fetch if force
     building_sheet = JSON.parse(IO.binread('temp/ratopia/施設.json'))
     material_sheet = JSON.parse(IO.binread('temp/ratopia/資源.json'))
+    trading_sheet = JSON.parse(IO.binread('temp/ratopia/交易.json'))
     materials = parse_materials(material_sheet)
     buildings = parse_buildings(building_sheet)
-    Database.new(materials, buildings)
+    tradings = parse_tradings(trading_sheet, materials)
+    Database.new(materials, buildings, tradings)
   end
 
   def fetch
@@ -45,7 +47,7 @@ class DatabaseLoader
         row['name'],
         last_category,
         row['get_by'],
-        row['price'],
+        row['price'].to_i,
         row['effect'],
         row['effect2'],
         parse_class(row['target_class']),
@@ -90,6 +92,10 @@ class DatabaseLoader
     end
   end
 
+  def parse_list(s)
+    s.split(/,/).map{|e| e.strip}
+  end
+
   def parse_buildings(rows)
     list = {}
     last_category = nil
@@ -107,16 +113,16 @@ class DatabaseLoader
       b = Building.new(
         row['name'],
         last_category,
-        row['cost'],
-        row['w'],
-        row['h'],
+        row['cost'].to_i,
+        row['w'].to_i,
+        row['h'].to_i,
         row['effect'],
         nil,
         row['has_image'] != '',
         row['has_main_image'] != '',
         row['desc'],
-        row['research_cost'],
-        row['research_prerequired'],
+        row['research_cost'].to_i,
+        parse_list(row['research_prerequired']),
         inputs,
         row['on_ground'] != '',
         row['has_worker'] != '',
@@ -139,6 +145,32 @@ class DatabaseLoader
       list[b.name] = b
     end
     list
+  end
+
+  def parse_tradings(rows, resources)
+    list = {}
+    names = %w(
+    アンダーフォージ ウッドウェブ グランバザー ゴールドテール スターケット
+     ソルテム ファーサイト フォレスタ バシキウム フレイヤ ポイズントゥス ヨートゥンハンマー ラッテラ
+     )
+    
+    names.each do |name|
+      list[name] = Trading.new(name, [], [])
+    end
+    
+    rows.each do |row|
+      r = row['resource']
+      resources[r].min_trade_amount = row['min_amount'].to_i
+      names.each do |name|
+        e = row[name]
+        if e == '<<'
+          list[name].imports << r
+        elsif e == '>>'
+          list[name].exports << r
+        end
+      end
+    end
+    list.values.sort_by{|t| t.name}
   end
 
 end

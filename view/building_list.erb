@@ -4,18 +4,18 @@
 |画像|名前|建築材料|生産される物|生産で使う物|研究コスト|
 <%- buildings.each do |b| -%>
 <%- a = additional_data[b.name] -%>
-|<%=h_icon(b,80,80,name:false,large:true)%>|<%=b.name%>|<%=h_item_list(b.inputs)%>|<%= h_item_list(a[:all_outputs],30,30,name:false) %>|<%= h_item_list(a[:all_inputs],30,30,name:false) %>|<%=b.research_cost%>|
+|<%=h_icon(b,80,80,name:false,large:true)%>|<%=h_link b.name%>|<%=h_item_list(b.inputs)%>|<%= h_item_list(a[:all_outputs],30,30,name:false) %>|<%= h_item_list(a[:all_inputs],30,30,name:false) %>|<%=b.research_cost%>|
 <%- end -%>
 <%- elsif category == 'サービス' -%>
 |画像|名前|建築材料|サービス効果|対象階級|研究コスト|
 <%- buildings.each do |b| -%>
 <%- a = additional_data[b.name] -%>
-|<%=h_icon(b,80,80,name:false,large:true)%>|<%=b.name%>|<%=h_item_list(b.inputs)%>|<%=b.service_effect%>|<%=h_class(b.service_target_class)%>|<%=b.research_cost%>|
+|<%=h_icon(b,80,80,name:false,large:true)%>|<%=h_link b.name%>|<%=h_item_list(b.inputs)%>|<%=b.service_effect%> <%=b.service_cost.empty? ? '' : '(使用:' + h_item_list(b.service_cost) + ')'%>|<%=h_class(b.service_target_class)%>|<%=b.research_cost%>|
 <%- end -%>
 <%- else -%>
-|画像|名前|建築材料|効果|研究コスト|
+|画像|名前|建築材料|説明/効果|研究コスト|
 <%- buildings.each do |b| -%>
 <%- a = additional_data[b.name] -%>
-|<%=h_icon(b,80,80,name:false,large:true)%>|<%=b.name%>|<%=h_item_list(b.inputs)%>|<%=b.effect%>|<%=b.research_cost%>|
+|<%=h_icon(b,80,80,name:false,large:true)%>|<%=h_link b.name%>|<%=h_item_list(b.inputs)%>|<%=h_txt b.desc%>&br()&br()<%=b.effect%>|<%=b.research_cost%>|
 <%- end -%>
 <%- end -%>

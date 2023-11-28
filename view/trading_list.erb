@@ -1,0 +1,6 @@
+** 貿易相手一覧
+
+|アイコン|名前|輸入|輸出|
+<%- tradings.each do |t| -%>
+||[[<%=t.name%>]]|<%=t.imports.map{|r| h_icon(r,40,40)}.join('') %>|<%=t.exports.map{|r| h_icon(r,40,40)}.join('') %>|
+<%- end -%>

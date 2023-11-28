@@ -27,6 +27,16 @@ def blank(w,h)
   "&image(https://img.atwiki.jp/ratopia/pub/x.png,width=#{w},height=#{h})"
 end
 
+def h_link(s)
+  if s.nil? || s == ''
+    nil
+  elsif s.is_a?(Array)
+    s.map{|e| h_link(e)}.join(",")
+  else
+    "[[#{s}]]"
+  end
+end
+
 def h_icon(x,w=40,h=40,alt:nil, name:true, br:false, link:true,large:false)
   if x.is_a?(String)
     x = $db.buildings[x] || $db.materials[x]
@@ -59,8 +69,8 @@ def h_icon(x,w=40,h=40,alt:nil, name:true, br:false, link:true,large:false)
   
   img = "&ref(https://img.atwiki.jp/ratopia/pub/#{img},width=#{w},height=#{h}#{opt_str})"
   
-  if name
-    br_str = br ? '&br()':''
+  if name && x.is_a?(Material) && ['木','茨','蔓生の木','石灰粉','骨粉','塩'].include?(x.name)
+    br_str = br ? '&br()' : ''
     "#{img}#{br_str}[[#{x.name}]]"
   else
     img
@@ -89,13 +99,10 @@ def h_item_list(items,*list,**args)
 end
 
 def h_class(n)
-  case n
-  when 1
-    '中産階級以上'
-  when 2
-    '上流階級以上'
+  if n.nil?
+    nil
   else
-    ''
+    h_img("class#{n}.png",80,24)
   end
 end
 
@@ -168,9 +175,26 @@ def make_resource_list_page
   output_page('資源一覧', out)
 end
 
+def make_trading_list_page
+  tradings = $db.tradings
+  out = template('trading_list').result_with_hash({tradings:})
+  output_page('貿易相手一覧', out)
+end
+
 def make_resource_page(r)
   products = $db.flatten_products.select{|p,b| p.product[0] == r.name}
-  out = template('resource').result_with_hash({r:,products:})
+  
+  trading_desc = nil
+  imports = $db.trading_imports_by_resource(r)
+  exports = $db.trading_exports_by_resource(r)
+  if !imports.empty? && !exports.empty?
+    desc = []
+    desc << "[[輸入(" +imports.map{|t| t.name}.join(' ') + ')>貿易相手一覧]]' unless imports.empty?
+    desc << "[[輸出(" +exports.map{|t| t.name}.join(' ') + ')>貿易相手一覧]]' unless exports.empty?
+    trading_desc = desc.join("&br()")
+  end
+  
+  out = template('resource').result_with_hash({r:,products:, trading_desc:})
   output_page(r.name, out, 'resource_base')
 end
 
@@ -204,6 +228,8 @@ def make_page(name)
       make_building_list_page
     when 'resource_list'
       make_resource_list_page
+    when 'trading_list'
+      make_trading_list_page
     when 'all'
       ['building_list','resource_list','building','resource'].each do |name|
         make_page(name)

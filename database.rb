@@ -1,7 +1,7 @@
 require './database_loader'
 
 class Material < Struct.new(:name, :category, :get_by, :price, :effect, :effect2, :target_class,
-                            :use_by, :has_image, :desc, :level)
+                            :use_by, :has_image, :desc, :level, :min_trade_amount)
   attr_accessor :resources_produce_from
   attr_accessor :resources_produce_to
   attr_accessor :buildings_by_output
@@ -25,15 +25,19 @@ class Product < Struct.new(:product, :inputs, :cost)
   attr_accessor :building
 end
 
+class Trading < Struct.new(:name, :imports, :exports)
+end
+
 # Ratopiaデータベース
 class Database
   RESOURCE_CATEGORIES = %w(食べ物 生活用品 材料)
   BUILDING_CATEGORIES = %w(基盤 原材料 生産 サービス 軍事 飾り 王室)
   
-  attr_reader :materials, :buildings
-  def initialize(_materials, _buildings)
+  attr_reader :materials, :buildings, :tradings
+  def initialize(_materials, _buildings, _tradings)
     @materials = _materials
     @buildings = _buildings
+    @tradings = _tradings
     verify
   end
 
@@ -46,6 +50,12 @@ class Database
   def verify_resource_number_list(list, msg)
     list.each.with_index do |input, i|
       verify_material_name(input[0], msg)
+    end
+  end
+
+  def verify_building_name(b, msg)
+    unless @buildings[b]
+      puts "Building #{b} not found in #{msg}"
     end
   end
 
@@ -63,11 +73,27 @@ class Database
       b.get_resources.each do |row|
         verify_material_name(row, "get_resources of #{b.name}")
       end
+
+      b.research_prerequired.each do |e|
+        verify_building_name(e, "research_prerequired of #{b.name}")
+      end
+    end
+  end
+
+  def verify_tradings
+    @tradings.each do |trading|
+      trading.imports.each do |r|
+        verify_material_name(r, "imports of #{trading.name}")
+      end
+      trading.exports.each do |r|
+        verify_material_name(r, "exports of #{trading.name}")
+      end
     end
   end
   
   def verify
     verify_buildings
+    verify_tradings
     provide_resources
   end
 
@@ -140,6 +166,38 @@ class Database
     @production_by_output_cache ||= make_all_products_by_output
     r = find(r)
     r && @production_by_output_cache[r.name]
+  end
+
+  def buildings_by_input(r)
+    r = find(r)
+    @buildings.values.select{|b| b.inputs.any?{|i| i[0] == r.name} }
+  end
+
+  def trading_imports_by_resource(r)
+    r = find(r)
+    @tradings.select{|t| t.imports.include?(r.name)}
+  end
+  
+  def trading_exports_by_resource(r)
+    r = find(r)
+    @tradings.select{|t| t.exports.include?(r.name)}
+  end
+
+  # JSONとしてダンプするためのハッシュ化
+  def dump
+    blist = @buildings.values.map do |b|
+      result = b.to_h
+      result[:products] = b.products.map{|p| p.to_h}
+      result
+    end
+    rlist = @materials.values.map do |r|
+      r.to_h
+    end
+
+    {
+      buildings: blist,
+      resources: rlist,
+    }
   end
 
 end

@@ -4,7 +4,7 @@
   <%- resource_by_categories[category].each_slice(9) do |slice|
      items = (slice+Array.new(9)).take(9).map do |r|
        if r
-         "CENTER:#{h_icon(r,80,80,br:true)}"
+         "CENTER:#{h_icon(r,80,80,br:true,name:false)}&br()[[#{r.name}]]"
        else
 	 ''
        end
