@@ -19,10 +19,12 @@ class DatabaseLoader
     building_sheet = JSON.parse(IO.binread('temp/ratopia/施設.json'))
     material_sheet = JSON.parse(IO.binread('temp/ratopia/資源.json'))
     trading_sheet = JSON.parse(IO.binread('temp/ratopia/交易.json'))
+    equip_sheet = JSON.parse(IO.binread('temp/ratopia/女王装備.json'))
     materials = parse_materials(material_sheet)
     buildings = parse_buildings(building_sheet)
     tradings = parse_tradings(trading_sheet, materials)
-    Database.new(materials, buildings, tradings)
+    equips = parse_equips(equip_sheet)
+    Database.new(materials, buildings, tradings, equips)
   end
 
   def fetch
@@ -171,6 +173,23 @@ class DatabaseLoader
       end
     end
     list.values.sort_by{|t| t.name}
+  end
+
+  def parse_equips(rows)
+    list = {}
+    rows.each do |row|
+      e = Equipment.new(
+        row['name'],
+        row['category'],
+        row['desc'],
+        row['effect'],
+        parse_material_number_list(row['input']),
+        row['memo'],
+        row['has_image'] != '',
+      )
+      list[e.name] = e
+    end
+    list
   end
 
 end

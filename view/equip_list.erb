@@ -1,0 +1,9 @@
+* 女王装備一覧
+
+<%- Database::EQUIP_CATEGORIES.each do |category| -%>
+** <%=category%>
+|画像|名前|効果|素材|説明|
+<%- equips_by_category[category].each do |e| -%>
+|<%=h_icon(e)%>|[[<%=e.name%>]]|<%=e.effect%>|<%=h_item_list(e.input)%>|<%=e.memo%> <%=h_txt e.desc%>|
+<%- end -%>
+<%- end -%>

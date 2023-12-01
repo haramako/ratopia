@@ -63,6 +63,12 @@ def h_icon(x,w=40,h=40,alt:nil, name:true, br:false, link:true,large:false)
     else
       img = "noimage.jpg"
     end
+  elsif x.is_a?(Equipment)
+    if x.has_image
+      img = "e/#{x.name}.jpg"
+    else
+      img = "noimage.jpg"
+    end
   else
     raise
   end
@@ -117,7 +123,7 @@ def h_resource(r)
 end
 
 def h_txt(txt)
-  (txt||'').gsub(/\n/,'&br()')
+  (txt||'').gsub(/[\r]?\n/,'&br()')
 end
 
 def get_from(r)
@@ -187,7 +193,7 @@ def make_resource_page(r)
   trading_desc = nil
   imports = $db.trading_imports_by_resource(r)
   exports = $db.trading_exports_by_resource(r)
-  if !imports.empty? && !exports.empty?
+  if !imports.empty? || !exports.empty?
     desc = []
     desc << "[[輸入(" +imports.map{|t| t.name}.join(' ') + ')>貿易相手一覧]]' unless imports.empty?
     desc << "[[輸出(" +exports.map{|t| t.name}.join(' ') + ')>貿易相手一覧]]' unless exports.empty?
@@ -198,6 +204,16 @@ def make_resource_page(r)
   output_page(r.name, out, 'resource_base')
 end
 
+def make_equip_list_page
+  equips_by_category = $db.equips.values.group_by{|e| e.category}
+  out = template('equip_list').result_with_hash({equips_by_category:})
+  output_page('女王装備一覧', out)
+end
+
+def make_equip_page(e)
+  out = template('equip').result_with_hash({e:,})
+  output_page(e.name, out, 'equip_base')
+end
 
 def make_building_pages
   $db.buildings.each_value do |b|
@@ -211,6 +227,12 @@ def make_resource_pages
   end
 end
 
+def make_equip_pages
+  $db.equips.each_value do |e|
+    make_equip_page(e)
+  end
+end
+
 def make_page(name)
   puts name
   case
@@ -218,20 +240,26 @@ def make_page(name)
     make_building_page(b)
   when r = $db.materials[name]
     make_resource_page(r)
+  when e = $db.equips[name]
+    make_equip_page(e)
   else
     case name
     when 'building'
       make_building_pages
     when 'resource'
       make_resource_pages
+    when 'equip'
+      make_equip_pages
     when 'building_list'
       make_building_list_page
     when 'resource_list'
       make_resource_list_page
     when 'trading_list'
       make_trading_list_page
+    when 'equip_list'
+      make_equip_list_page
     when 'all'
-      ['building_list','resource_list','building','resource'].each do |name|
+      ['building_list','resource_list','trading_list','equip_list','building','resource','equip'].each do |name|
         make_page(name)
       end
     end
@@ -272,7 +300,7 @@ end
 def upload_page(page_name, out, base = nil)
   $write_count += 1
   if $write_count >= 50
-    puts "Write limit! waite for 10 minites"
+    puts "Write limit! wait for 10 minites"
     sleep 60*10
     $write_count = 0
   end

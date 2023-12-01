@@ -28,16 +28,21 @@ end
 class Trading < Struct.new(:name, :imports, :exports)
 end
 
+class Equipment < Struct.new(:name, :category, :desc, :effect, :input, :memo, :has_image)
+end
+
 # Ratopiaデータベース
 class Database
   RESOURCE_CATEGORIES = %w(食べ物 生活用品 材料)
-  BUILDING_CATEGORIES = %w(基盤 原材料 生産 サービス 軍事 飾り 王室)
+  BUILDING_CATEGORIES = %w(基盤 原材料 生産 サービス 軍事 飾り 王室 その他)
+  EQUIP_CATEGORIES = %w(武器 防具 装身具)
   
-  attr_reader :materials, :buildings, :tradings
-  def initialize(_materials, _buildings, _tradings)
+  attr_reader :materials, :buildings, :tradings, :equips
+  def initialize(_materials, _buildings, _tradings, _equips)
     @materials = _materials
     @buildings = _buildings
     @tradings = _tradings
+    @equips = _equips
     verify
   end
 
@@ -128,7 +133,7 @@ class Database
     if name_or_obj.nil?
       nil
     elsif name_or_obj.is_a?(String)
-      @materials[name_or_obj] || @buildings[name_or_obj]
+      @materials[name_or_obj] || @buildings[name_or_obj] || @equips[name_or_obj]
     else
       name_or_obj
     end

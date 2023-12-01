@@ -24,3 +24,7 @@
 <%- end -%>
 <%- end -%>
 
+<%- unless b.get_resources.empty? -%>
+** 取得できる資源
+<%= h_item_list(b.get_resources) %>
+<%- end -%>
